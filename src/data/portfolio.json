@@ -1,0 +1,160 @@
+{
+	"personal": {
+		"name": "David Kjellstrand",
+		"role": "Front End Developer",
+		"bio": "Hi! I'm David, an aspiring Front End Developer and long time Writer/Producer. Right now I'm looking for an internship to further develop my skills in modern front end development and contribute to innovative and interesting projects. During the past 8 years as a signed and freelancing audio creator I've honed my creative and technical skills through working on multiple projects for artists, labels, commercials and tv.",
+		"about": {
+			"who": "Hi! I'm David Kjellstrand! An aspiring Front End Developer and former writer/producer with a passion for all things creative! During the past 8 years as a freelancing audio creator I've honed my creative, social and technical skills through working on multiple projects for artists, labels, commercials and tv.",
+			"what": "What am I doing? Well I'm trying a new path, moving away from music to coding, by studying Front End Development at Medieinstitutet and I'm looking for an internship for late 2025 and spring of 2026!",
+			"where": "Stockholm is home! Been spending the past year outside Karlstad while studying though!"
+		},
+		"location": "Stockholm, Sweden"
+	},
+	"contact": {
+		"email": "david.kjellstrand@gmail.com",
+		"phone": "+46 (0) 73 529 2002",
+		"linkedin": "https://www.linkedin.com/in/david-kjellstrand-b6760113a/",
+		"github": "https://github.com/Davkje"
+	},
+	"skills": {
+		"code": [
+			"HTML",
+			"CSS",
+			"TypeScript",
+			"React",
+			"Next.js",
+			"PHP",
+			"Vue",
+			"Vite",
+			"Algolia",
+			"Framer Motion",
+			"SQL"
+		],
+		"toolbox": [
+			"VS Code",
+			"Figma",
+			"Adobe Suite",
+			"GitHub",
+			"Prettier",
+			"ESLint",
+			"npm/pnpm",
+			"Lighthouse",
+			"Teams",
+			"Slack",
+			"Logic Pro",
+			"Wwise"
+		],
+		"practices": [
+			"UI/UX Basics",
+			"Wireframing",
+			"Prototyping",
+			"API Development",
+			"Design Systems",
+			"SEO",
+			"Agile/Scrum",
+			"Accessibility",
+			"Responsive Design",
+			"Cross-Browser Compatibility"
+		],
+		"upcoming": ["Next.js", "Three.js", "Testing"]
+	},
+	"projects": [
+		{
+			"id": "dino-game",
+			"title": "Dino Game",
+			"description": "A small game you might recognize where you control a dinosaur and try to avoid obstacles. The game is built using Vue, TypeScript, HTML and all assets were created by me including the audio. Try it and you will learn more about it as you play!",
+			"tags": ["TypeScript", "Vue", "HTML", "SCSS", "Game", "Audio"],
+			"liveUrl": "https://davkje.github.io/jumping-game/",
+			"githubUrl": "https://github.com/Davkje/jumping-game",
+			"featured": true,
+			"img": "https://placehold.net/default.png",
+			"year": "2024",
+			"bg": "#dcf3de",
+			"accent": "#18191c"
+		},
+		{
+			"id": "tic-tac-toe",
+			"title": "Tic Tac Toe",
+			"description": "A simple yet fleshed out game of Tic Tac Toe! The game is built with TypeScript, HTML and SCSS. It has a working game loop, light and dark mode and adaptive audio with a volume slider.",
+			"tags": ["TypeScript", "HTML", "SCSS", "Game", "Audio"],
+			"liveUrl": "https://davkje.github.io/tic-tac-toe-game/",
+			"githubUrl": "https://github.com/Davkje/tic-tac-toe-game",
+			"featured": true,
+			"img": "https://placehold.net/default.png",
+			"year": "2024",
+			"bg": "#b12424",
+			"accent": "#dcf3de"
+		},
+		{
+			"id": "cookies-webshop",
+			"title": "Cookies Webshop",
+			"description": "My first website using JavaScript! The website is a simple webshop where you can purchase cookies. Built with JavaScript, HTML and SCSS. It has a working cart, checkout form, validation and filtering for browsing!",
+			"tags": ["JavaScript", "HTML", "SCSS", "Webshop", "RegEx", "Filtering"],
+			"liveUrl": "https://davkje.github.io/Davids-Cookies/",
+			"githubUrl": "https://github.com/Davkje/Davids-Cookies",
+			"featured": true,
+			"img": "https://placehold.net/default.png",
+			"year": "2024",
+			"bg": "#28292d",
+			"accent": "#dcf3de"
+		},
+		{
+			"id": "design-swap",
+			"title": "Design Swap",
+			"description": "Group project where we designed a website and gave it to another group to code. We got this movie-premiere-site that we created using Vue and TypeScript. A fun challenge being handed a design and doing our best to bring it into reality!",
+			"tags": ["TypeScript", "Vue", "Design", "HTML", "SCSS"],
+			"liveUrl": "https://medieinstitutet.github.io/fed24d-grafiska-verktyg-kejsartamarinerna/",
+			"githubUrl": "https://github.com/Medieinstitutet/fed24d-grafiska-verktyg-kejsartamarinerna",
+			"featured": true,
+			"img": "https://placehold.net/default.png",
+			"year": "2025",
+			"bg": "#dcf3de",
+			"accent": "#18191c"
+		},
+		{
+			"id": "ballerina-quiz",
+			"title": "Ballerina Quiz",
+			"description": "A small group project where we created a quiz about 'Ballerinas' (a Swedish cookie). Created with TypeScript with a big focus on working together using the Agile methodology. The quiz has a timer, score system and randomized questions.",
+			"tags": ["TypeScript", "HTML", "SCSS", "Quiz", "Agile", "Arrays"],
+			"liveUrl": "https://medieinstitutet.github.io/fed24d-js-intro-inl-2-quiz-ballerinas/",
+			"githubUrl": "https://github.com/medieinstitutet/fed24d-js-intro-inl-2-quiz-ballerinas",
+			"featured": false,
+			"img": "https://placehold.net/default.png",
+			"year": "2025",
+			"bg": "#b12424",
+			"accent": "#dcf3de"
+		},
+		{
+			"id": "code-smells",
+			"title": "Code Smells",
+			"description": "A school assignment where we had to clean up a codebase with a lot of 'Code Smells'. It's a simple layout that fetches and displays podcasts. This was also the first time I worked with APIs.",
+			"tags": ["TypeScript", "API", "Refactor", "Bugfixing"],
+			"liveUrl": "https://medieinstitutet.github.io/fed24d-arbetsmetodik-inl-1-Davkje/",
+			"githubUrl": "https://github.com/Medieinstitutet/fed24d-arbetsmetodik-inl-1-Davkje",
+			"featured": false,
+			"img": "https://placehold.net/default.png",
+			"year": "2024",
+			"bg": "#28292d",
+			"accent": "#dcf3de"
+		}
+	],
+	"education": [
+		{
+			"school": "Medieinstitutet",
+			"degree": "Front End Development",
+			"location": "Karlstad, Sweden",
+			"startYear": 2024,
+			"endYear": 2026,
+			"current": true
+		}
+	],
+	"experience": [
+		{
+			"role": "Freelance Writer & Producer",
+			"company": "Self-employed",
+			"startYear": 2016,
+			"endYear": 2024,
+			"description": "8 years as a signed and freelancing audio creator, working on projects for artists, labels, commercials and tv."
+		}
+	]
+}

@@ -1,27 +1,6 @@
-const skills = [
-	"Html",
-	"CSS",
-	"JavaScript",
-	"TypeScript",
-	"React",
-	"Next",
-	"Algolia",
-	"PHP",
-	"Wordpress",
-	"Vite",
-	"Vue",
-	"Node",
-	"Claude",
-	"Express",
-	"Git",
-	"Github",
-	"Bitbucket",
-	"Figma",
-	"Adobe Suite",
-	"Procreate",
-	"Logic Pro",
-	"Wwise",
-];
+import portfolioData from "../data/portfolio.json";
+
+const skills = [...portfolioData.skills.code, ...portfolioData.skills.toolbox];
 
 export default function Skills() {
 	// Duplicate list for seamless loop
@@ -30,14 +9,14 @@ export default function Skills() {
 	return (
 		<section className="bg-background w-full overflow-hidden py-6">
 			<div
-				className="flex gap-11 whitespace-nowrap"
+				className="flex gap-4 md:gap-11 whitespace-nowrap"
 				style={{ animation: "marquee 24s linear infinite" }}
 			>
 				{doubled.map((skill, i) => (
 					<span
 						key={i}
 						className="uppercase leading-none shrink-0"
-						style={{ fontSize: "clamp(28px, 2.8vw, 48px)" }}
+						style={{ fontSize: "clamp(18px, 2.8vw, 48px)" }}
 					>
 						{skill}
 					</span>

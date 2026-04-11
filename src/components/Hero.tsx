@@ -25,7 +25,7 @@ export default function Hero() {
 					</svg>
 				</a>
 				<a
-					href="https://github.com/davidkjellstrand"
+					href="https://github.com/davkje"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="hover:opacity-50 transition-opacity"
@@ -41,7 +41,7 @@ export default function Hero() {
 				<div className="w-px h-16 bg-foreground" />
 			</div>
 
-			<div className="px-6 place-self-start">
+			<div className="px-6 py-2 place-self-start">
 				<div className="uppercase leading-[clamp(80px,12vw,200px)] text-[clamp(80px,13vw,240px)]">
 					<p>ITS</p>
 					<p>DOWN</p>

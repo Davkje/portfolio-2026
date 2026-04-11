@@ -1,48 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import ProjectSlide, { Project } from "./ProjectSlide"; // Justera sökvägen om det behövs
 import ProjectThumbnail from "./ProjectThumbnail";
+import portfolioData from "../data/portfolio.json";
 
-const PROJECTS: Project[] = [
-	{
-		id: "project-0",
-		title: "Arkiv",
-		img: "/assets/mockup_rainstorm.png",
-		year: "2024",
-		tags: ["Web", "Design system"],
-		bg: "#b12424",
-		accent: "#dcf3de",
-	},
-	{
-		id: "project-1",
-		title: "Strata",
-		img: "/assets/dino.png",
-		year: "2023",
-		tags: ["Branding", "Type"],
-		bg: "#18191c",
-		accent: "#dcf3de",
-	},
-	{
-		id: "project-2",
-		title: "Meridian",
-		img: "/assets/dino.png",
-		year: "2024",
-		tags: ["App", "Motion"],
-		bg: "#dcf3de",
-		accent: "#18191c",
-	},
-	{
-		id: "project-3",
-		title: "Fält",
-		img: "/assets/dino.png",
-		year: "2023",
-		tags: ["Installation", "3D"],
-		bg: "#18191c",
-		accent: "#b12424",
-	},
-];
+const PROJECTS: Project[] = [...portfolioData.projects];
 
 export default function ProjectCarousel() {
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -81,12 +44,16 @@ export default function ProjectCarousel() {
 	}, []);
 
 	const scrollTo = (id: string) => {
-		document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+		document.getElementById(id)?.scrollIntoView({
+			behavior: "smooth",
+			block: "end", // Detta tvingar mitten av elementet till mitten av skärmen
+		});
 	};
 
 	return (
-		<div className="relative w-full flex flex-col md:flex-row-reverse">
-			<nav className="sticky top-0 z-50 w-full md:w-32 md:h-dvh flex md:flex-col gap-2 md:gap-4 px-4 md:justify-center bg-background/80 backdrop-blur-md md:bg-transparent overflow-x-auto md:overflow-visible scrollbar-none shrink-0">
+		<div className="font-sans mt-[7dvh] relative w-full flex flex-col md:flex-row-reverse">
+			<nav className="sticky top-0 md:top-[7dvh] h-[15svh] gap-4 px-4 md:pr-0 pb-4 md:py-0 z-50 w-full md:w-32 md:h-[93dvh] flex md:flex-col md:justify-center bg-background overflow-x-auto md:overflow-visible scrollbar-none shrink-0">
+				<div className="absolute hidden md:block top-[-7dvh] right-0 w-screen h-[7dvh] z-700 bg-background"></div>
 				{PROJECTS.map((p, i) => (
 					<ProjectThumbnail
 						key={p.id}
@@ -104,8 +71,12 @@ export default function ProjectCarousel() {
 						key={p.id}
 						project={p}
 						index={i}
-						ref={(el) => (sectionRefs.current[i] = el)}
-						imgRef={(el) => (imgRefs.current[i] = el)}
+						ref={(el) => {
+							sectionRefs.current[i] = el;
+						}}
+						imgRef={(el) => {
+							imgRefs.current[i] = el;
+						}}
 					/>
 				))}
 			</main>

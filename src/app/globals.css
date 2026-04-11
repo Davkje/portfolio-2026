@@ -4,12 +4,16 @@
 	--main-1: #b12424;
 	--main-2: #dcf3de;
 	--main-3: #18191c;
+	--main-4: #28292d;
 }
 
 @theme inline {
 	--color-background: var(--main-3);
 	--color-foreground: var(--main-2);
 	--font-jomolhari: var(--font-jomolhari);
+	--font-sans: var(--font-geist-sans);
+	--font-mono: var(--font-geist-mono);
+	--font-lora: var(--font-lora);
 }
 
 body {

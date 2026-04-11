@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Jomolhari } from "next/font/google";
+import { Lora } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
@@ -19,6 +20,12 @@ const jomolhari = Jomolhari({
 	variable: "--font-jomolhari",
 });
 
+const lora = Lora({
+	weight: ["400", "500", "600", "700"], // Här kommer det fungera!
+	subsets: ["latin"],
+	variable: "--font-lora",
+});
+
 export const metadata: Metadata = {
 	title: "Portfolio - David Kjellstrand",
 	description: "David Kjellstrands Portfolio 2026",
@@ -32,7 +39,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={`${geistSans.variable} ${geistMono.variable} ${jomolhari.variable} h-full antialiased bg-(--main-1)`}
+			className={`${geistSans.variable} ${geistMono.variable} ${jomolhari.variable} ${lora.variable} h-full antialiased bg-(--main-1)`}
 		>
 			<body className="min-h-full flex w-full flex-col font-jomolhari">
 				<Navbar />
