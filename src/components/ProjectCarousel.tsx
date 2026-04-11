@@ -46,7 +46,7 @@ export default function ProjectCarousel() {
 	const scrollTo = (id: string) => {
 		document.getElementById(id)?.scrollIntoView({
 			behavior: "smooth",
-			block: "end", // Detta tvingar mitten av elementet till mitten av skärmen
+			block: "end",
 		});
 	};
 

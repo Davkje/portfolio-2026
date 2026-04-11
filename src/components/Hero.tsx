@@ -41,8 +41,8 @@ export default function Hero() {
 				<div className="w-px h-16 bg-foreground" />
 			</div>
 
-			<div className="px-6 py-2 place-self-start">
-				<div className="uppercase leading-[clamp(80px,12vw,200px)] text-[clamp(80px,13vw,240px)]">
+			<div className="px-6 py-2 place-self-start mt-16 md:mt-0">
+				<div className="uppercase leading-[clamp(80px,17vw,160px)] text-[clamp(80px,18vw,180px)]">
 					<p>ITS</p>
 					<p>DOWN</p>
 					<p>THERE</p>

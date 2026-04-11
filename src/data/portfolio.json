@@ -125,15 +125,15 @@
 			"accent": "#dcf3de"
 		},
 		{
-			"id": "code-smells",
-			"title": "Code Smells",
-			"description": "A school assignment where we had to clean up a codebase with a lot of 'Code Smells'. It's a simple layout that fetches and displays podcasts. This was also the first time I worked with APIs.",
-			"tags": ["TypeScript", "API", "Refactor", "Bugfixing"],
-			"liveUrl": "https://medieinstitutet.github.io/fed24d-arbetsmetodik-inl-1-Davkje/",
-			"githubUrl": "https://github.com/Medieinstitutet/fed24d-arbetsmetodik-inl-1-Davkje",
+			"id": "demokrati-uppropet",
+			"title": "Demokrati Uppropet",
+			"description": "Small onepage site for Kristna Fredsrörelsen.",
+			"tags": ["TypeScript", "NExt"],
+			"liveUrl": "https://demokratiuppropet.se/",
+			"githubUrl": "",
 			"featured": false,
 			"img": "https://placehold.net/default.png",
-			"year": "2024",
+			"year": "2025",
 			"bg": "#28292d",
 			"accent": "#dcf3de"
 		}
@@ -142,7 +142,7 @@
 		{
 			"school": "Medieinstitutet",
 			"degree": "Front End Development",
-			"location": "Karlstad, Sweden",
+			"location": "Sweden",
 			"startYear": 2024,
 			"endYear": 2026,
 			"current": true
@@ -150,11 +150,11 @@
 	],
 	"experience": [
 		{
-			"role": "Freelance Writer & Producer",
+			"role": "Songwriter & Producer",
 			"company": "Self-employed",
 			"startYear": 2016,
-			"endYear": 2024,
-			"description": "8 years as a signed and freelancing audio creator, working on projects for artists, labels, commercials and tv."
+			"endYear": 2026,
+			"description": "Signed and freelancing music creator. Worked on projects for artists, labels, commercials and tv."
 		}
 	]
 }
