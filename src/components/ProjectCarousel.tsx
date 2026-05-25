@@ -61,8 +61,8 @@ export default function ProjectCarousel() {
 
 	return (
 		<div className="font-sans mt-[7dvh] relative w-full flex flex-col md:flex-row-reverse">
-			<nav className="sticky top-0 md:top-[7dvh] h-[124px] gap-4 px-4 md:pr-0 pb-4 md:py-0 z-50 w-full md:w-32 md:h-[93dvh] flex md:flex-col md:justify-center bg-background overflow-x-auto md:overflow-visible scrollbar-none shrink-0">
-				<div className="absolute hidden md:block top-[-7dvh] right-0 w-screen h-[7dvh] z-700 bg-background"></div>
+			<nav className="sticky top-0 md:top-[7dvh] h-31 gap-1 px-1 md:pr-0 pb-4 md:py-0 z-50 w-full md:w-32 md:h-[93dvh] flex md:flex-col md:justify-center bg-background overflow-x-auto md:overflow-visible scrollbar-none shrink-0">
+				<div className="absolute hidden md:block top-[-7dvh] right-0 w-screen h-[7dvh] z-700 bg-background" />
 				{PROJECTS.map((p, i) => (
 					<ProjectThumbnail
 						key={p.id}
@@ -74,7 +74,7 @@ export default function ProjectCarousel() {
 				))}
 			</nav>
 
-			<main className="flex-1 min-w-0 flex flex-col gap-4">
+			<main className="flex-1 min-w-0 flex flex-col gap-1">
 				{PROJECTS.map((p, i) => (
 					<ProjectSlide
 						key={p.id}
@@ -86,10 +86,10 @@ export default function ProjectCarousel() {
 						imgRef={(el) => {
 							imgRefs.current[i] = el;
 						}}
+						onScrollTo={() => scrollTo(p.id, i)}
 					/>
 				))}
 			</main>
-			{/* <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} /> */}
 		</div>
 	);
 }

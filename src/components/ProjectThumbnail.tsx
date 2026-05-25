@@ -19,7 +19,7 @@ export default function ProjectThumbnail({
 		<button
 			onClick={onClick}
 			className={`
-        place-self-end relative flex-none overflow-hidden transition-all duration-500 ease-in-out group
+        cursor-pointer place-self-end relative flex-none overflow-hidden transition-all duration-500 ease-in-out group
         h-13 min-w-20 
         ${active ? "grow opacity-100" : " opacity-60"}  
         md:w-full md:min-h-30 md:min-w-2

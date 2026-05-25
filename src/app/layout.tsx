@@ -39,9 +39,9 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={`${geistSans.variable} ${geistMono.variable} ${jomolhari.variable} ${lora.variable} h-full antialiased bg-(--main-1)`}
+			className={`${geistSans.variable} ${geistMono.variable} ${jomolhari.variable} ${lora.variable} h-full antialiased bg-(--main-1) overflow-x-hidden`}
 		>
-			<body className="min-h-full flex w-full flex-col font-jomolhari">
+			<body className="min-h-full flex w-full flex-col font-jomolhari scroll-x-hidden">
 				<Navbar />
 				{children}
 			</body>
