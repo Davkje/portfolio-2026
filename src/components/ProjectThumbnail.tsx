@@ -20,9 +20,9 @@ export default function ProjectThumbnail({
 			onClick={onClick}
 			className={`
         place-self-end relative flex-none overflow-hidden transition-all duration-500 ease-in-out group
-        h-13 min-w-2 
+        h-13 min-w-20 
         ${active ? "grow opacity-100" : " opacity-60"}  
-        md:w-full md:min-h-20 md:min-w-2
+        md:w-full md:min-h-30 md:min-w-2
         ${active ? "md:h-[100px]" : "md:h-[60px]"}
       `}
 			style={{

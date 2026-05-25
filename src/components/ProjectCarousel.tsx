@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import ProjectSlide, { Project } from "./ProjectSlide"; // Justera sökvägen om det behövs
+import ProjectSlide, { Project } from "./ProjectSlide";
 import ProjectThumbnail from "./ProjectThumbnail";
 import portfolioData from "../data/portfolio.json";
 
@@ -11,6 +11,8 @@ export default function ProjectCarousel() {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 	const imgRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+	const programmaticRef = useRef(false);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -31,11 +33,14 @@ export default function ProjectCarousel() {
 				const imgEl = imgRefs.current[i];
 				if (imgEl) {
 					const slideCenter = rect.top + rect.height / 2;
-					const offset = (slideCenter - mid) * 0.12;
+					const offset = (slideCenter - mid) * 0.06;
 					imgEl.style.transform = `translateY(${offset}px)`;
 				}
 			});
-			setActiveIndex(closest);
+
+			if (!programmaticRef.current) {
+				setActiveIndex(closest);
+			}
 		};
 
 		window.addEventListener("scroll", handleScroll, { passive: true });
@@ -43,16 +48,20 @@ export default function ProjectCarousel() {
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
-	const scrollTo = (id: string) => {
-		document.getElementById(id)?.scrollIntoView({
-			behavior: "smooth",
-			block: "end",
-		});
+	const scrollTo = (id: string, index: number) => {
+		programmaticRef.current = true;
+		setActiveIndex(index);
+		document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+
+		// Släpp låset efter att scrollen bör vara klar
+		setTimeout(() => {
+			programmaticRef.current = false;
+		}, 800);
 	};
 
 	return (
 		<div className="font-sans mt-[7dvh] relative w-full flex flex-col md:flex-row-reverse">
-			<nav className="sticky top-0 md:top-[7dvh] h-[15svh] gap-4 px-4 md:pr-0 pb-4 md:py-0 z-50 w-full md:w-32 md:h-[93dvh] flex md:flex-col md:justify-center bg-background overflow-x-auto md:overflow-visible scrollbar-none shrink-0">
+			<nav className="sticky top-0 md:top-[7dvh] h-[124px] gap-4 px-4 md:pr-0 pb-4 md:py-0 z-50 w-full md:w-32 md:h-[93dvh] flex md:flex-col md:justify-center bg-background overflow-x-auto md:overflow-visible scrollbar-none shrink-0">
 				<div className="absolute hidden md:block top-[-7dvh] right-0 w-screen h-[7dvh] z-700 bg-background"></div>
 				{PROJECTS.map((p, i) => (
 					<ProjectThumbnail
@@ -60,7 +69,7 @@ export default function ProjectCarousel() {
 						project={p}
 						index={i}
 						active={activeIndex === i}
-						onClick={() => scrollTo(p.id)}
+						onClick={() => scrollTo(p.id, i)}
 					/>
 				))}
 			</nav>
@@ -80,6 +89,7 @@ export default function ProjectCarousel() {
 					/>
 				))}
 			</main>
+			{/* <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} /> */}
 		</div>
 	);
 }
