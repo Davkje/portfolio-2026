@@ -62,43 +62,68 @@
 		{
 			"id": "rainstorm",
 			"title": "Rainstorm",
-			"description": "Rainstorm is a creative writing tool designed by me, David, to help you quickly generate and define ideas without getting lost in the details. It is inspired by role-playing games like Dungeons & Dragons, where “roll-tables” provide random prompts to spark improvisation. Similarly, Rainstorm provides a simple word generator that encourages creativity and lets you discover and associate on your own.",
-			"tags": ["TypeScript", "Next", "Drag&Drop", "Audio"],
+			"description": "A web-based ideation and writing tool that uses randomness and constraints to spark creativity.",
+			"about": "Rainstorm helps writers, musicians, and game designers move past the blank page. Inspired by roll-tables from tabletop RPGs like D&D, it combines random word generation with a drag-and-drop canvas to help you explore and organise ideas. Once you've gathered your words, switch to Define mode to add short notes and turn loose associations into a clear concept — then export as PDF, TXT, or copy to clipboard.",
+			"role": "Solo Developer & Designer",
+			"type": "Graduation Project",
+			"highlights": [
+				"Two-mode workflow: Ideate (drag-and-drop canvas) and Define (structured text)",
+				"Drag-and-drop built with dnd-kit, animations with Framer Motion, audio with Howler.js",
+				"Fully keyboard accessible, following the European Accessibility Act (2025) guidelines",
+				"Projects saved locally via localStorage — no backend, no accounts, instant onboarding"
+			],
+			"tags": ["TypeScript", "Next.js", "dnd-kit", "Framer Motion", "Howler.js", "Tailwind"],
 			"liveUrl": "https://rainstorm-project.vercel.app/",
 			"githubUrl": "https://github.com/Davkje/rainstorm-next",
 			"featured": true,
 			"img": "/assets/rain.png",
 			"altImg": "/assets/rainsecond.png",
 			"videoUrl": "/assets/movies/rainstormhome.mov",
-			"year": "2024",
-			"bg": "#28292d",
-			"accent": "#dcf3de"
+			"year": "2026",
+			"bg": "#dcf3de",
+			"accent": "#18191c"
 		},
 		{
 			"id": "papercut",
 			"title": "Papercut",
-			"description": "Papercut",
-			"tags": ["TypeScript", "Next"],
+			"description": "Revamped search, filtering and checkout for a Stockholm bookshop's WooCommerce store.",
+			"about": "Papercut is an independent bookshop in Stockholm. I was brought in to modernise their existing WordPress/WooCommerce site — overhauling the search experience, adding faceted filtering, and improving the overall design and checkout flow.",
+			"role": "Developer & Designer Intern at Afonso",
+			"type": "Client Work",
+			"highlights": [
+				"Built a custom WordPress plugin with React and GraphQL",
+				"Integrated Algolia for fast, faceted search and filtering",
+				"Improved checkout UX and overall site design"
+			],
+			"tags": ["PHP", "WordPress", "React", "WooCommerce", "GraphQL", "Algolia"],
 			"liveUrl": "https://papercutshop.se/",
 			"githubUrl": "",
 			"featured": true,
 			"img": "/assets/papercut.png",
-			"altImg": "/assets/papercut.png",
+			"altImg": "/assets/demokrati.png",
 			"videoUrl": "/assets/movies/papercut.mov",
-			"year": "2025",
-			"bg": "#28292d",
+			"year": "2025-2026",
+			"bg": "#b12424",
 			"accent": "#dcf3de"
 		},
 		{
 			"id": "demokrati-uppropet",
 			"title": "Demokrati Uppropet",
-			"description": "Small onepage site for Kristna Fredsrörelsen.",
-			"tags": ["TypeScript", "Next"],
+			"description": "Campaign site for a democratic manifesto — built and launched in two days.",
+			"about": "A one-page campaign site for Kristna Fredsrörelsen, gathering signatures and spreading a democratic manifesto ahead of Sweden's 2026 election. Built headless with Next.js, the site prioritises readability and reach — with Web Share API integration so visitors can easily spread the message across platforms.",
+			"role": "Developer, Intern at Afonso",
+			"type": "Client Work",
+			"highlights": [
+				"Designed and built in two days to meet a tight campaign deadline",
+				"Web Share API integration to help visitors spread the manifesto",
+				"Clean, readable layout focused on content and message over aesthetics"
+			],
+			"tags": ["TypeScript", "Next.js", "Headless", "Web Share API", "Framer Motion"],
 			"liveUrl": "https://demokratiuppropet.se/",
 			"githubUrl": "",
 			"featured": false,
 			"img": "/assets/demokrati.png",
-			"altImg": "/assets/demokrati.png",
+			"altImg": "/assets/papercut.png",
 			"year": "2025",
 			"bg": "#28292d",
 			"accent": "#dcf3de"
@@ -119,7 +144,7 @@
 			"role": "Songwriter & Producer",
 			"company": "Self-employed",
 			"startYear": 2016,
-			"endYear": 2026,
+			"endYear": "Current",
 			"description": "Signed and freelancing music creator. Worked on projects for artists, labels, commercials and tv."
 		}
 	]

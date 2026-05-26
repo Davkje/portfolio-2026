@@ -21,6 +21,10 @@ body {
 	color: var(--main-2);
 }
 
+button {
+	cursor: pointer;
+}
+
 @keyframes marquee {
 	from {
 		transform: translateX(0);
