@@ -78,15 +78,16 @@
 			"featured": true,
 			"img": "/assets/rain.png",
 			"altImg": "/assets/rainsecond.png",
-			"videoUrl": "/assets/movies/rainstormhome.mov",
+			"videoUrl": "/assets/rainstorm/rainhome.mov",
+			"altVideoUrl": "/assets/rainstorm/rainhome.mov",
 			"year": "2026",
-			"bg": "#dcf3de",
-			"accent": "#18191c"
+			"bg": "#18191c",
+			"accent": "#dcf3de"
 		},
 		{
 			"id": "papercut",
 			"title": "Papercut",
-			"description": "Revamped search, filtering and checkout for a Stockholm bookshop's WooCommerce store.",
+			"description": "Revamped bookshop's WooCommerce store with improved search, filtering and checkout.",
 			"about": "Papercut is an independent bookshop in Stockholm. I was brought in to modernise their existing WordPress/WooCommerce site — overhauling the search experience, adding faceted filtering, and improving the overall design and checkout flow.",
 			"role": "Developer & Designer Intern at Afonso",
 			"type": "Client Work",
@@ -99,11 +100,12 @@
 			"liveUrl": "https://papercutshop.se/",
 			"githubUrl": "",
 			"featured": true,
-			"img": "/assets/papercut.png",
-			"altImg": "/assets/demokrati.png",
-			"videoUrl": "/assets/movies/papercut.mov",
+			"img": "/assets/papercut/papershelf.jpg",
+			"videoUrl": "",
+			"altImg": "",
+			"altVideoUrl": "",
 			"year": "2025-2026",
-			"bg": "#b12424",
+			"bg": "#18191c",
 			"accent": "#dcf3de"
 		},
 		{
@@ -123,9 +125,9 @@
 			"githubUrl": "",
 			"featured": false,
 			"img": "/assets/demokrati.png",
-			"altImg": "/assets/papercut.png",
+			"altImg": "/assets/demokrati.png",
 			"year": "2025",
-			"bg": "#28292d",
+			"bg": "#18191c",
 			"accent": "#dcf3de"
 		}
 	],

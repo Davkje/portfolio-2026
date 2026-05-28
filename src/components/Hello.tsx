@@ -27,13 +27,11 @@ export default function Hello() {
 		<section className="relative bg-background w-full min-h-[70vh] place-content-center place-items-center flex flex-col md:flex-row gap-6 md:justify-between p-6 md:p-12">
 			<div className="white-space z-300 text-[clamp(20px,6vw,44px)] md:max-w-[50vw] relative flex flex-col gap-2 md:gap-6 items-start justify-center">
 				<AnimatedBlock delay={0}>
-					<p className="font-light uppercase text-[clamp(24px,4vw,64px)] tracking-wide ">
-						Get to know me
-					</p>
+					<p className="uppercase text-[clamp(24px,4vw,32px)]">Get to know me</p>
 				</AnimatedBlock>
 
 				<AnimatedBlock delay={0.1}>
-					<p className="font-medium text-[clamp(20px,3vw,28px)] leading-[clamp(28px,4vw,36px)]">
+					<p className="font-normal text-[clamp(18px,2.6vw,24px)] leading-[clamp(28px,5vw,36px)]">
 						Hi! I&apos;m David, Front End Developer and long time writer/producer. Been coding for
 						about 3 years. Educated at Medieinstitutet.
 						<br />

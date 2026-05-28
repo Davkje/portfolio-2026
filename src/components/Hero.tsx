@@ -42,14 +42,14 @@ export default function Hero() {
 			</div>
 
 			<div className="px-6 py-2 place-self-start mt-16 md:mt-0">
-				<div className="uppercase leading-[clamp(80px,17vw,160px)] text-[clamp(80px,18vw,180px)]">
+				<div className="font-jomolhari uppercase leading-[clamp(80px,17vw,160px)] text-[clamp(80px,18vw,180px)]">
 					<p>ITS</p>
 					<p>DOWN</p>
 					<p>THERE</p>
 				</div>
 			</div>
 			<div className="flex flex-col items-center uppercase whitespace-nowrap text-center pb-40 md:pb-24">
-				<p className="text-[clamp(36px,4vw,64px)]">The Portfolio</p>
+				<h1 className="text-[clamp(36px,4vw,64px)]">The Portfolio</h1>
 				<div className="flex flex-col items-center gap-1 mt-3 text-[clamp(14px,1.2vw,20px)]">
 					<p>By David Kjellstrand</p>
 					<p>Front End Developer</p>

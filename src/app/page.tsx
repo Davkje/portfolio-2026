@@ -11,7 +11,6 @@ export default function Home() {
 			<Hero />
 			<Hello />
 			<Skills />
-			<h3 className="p-4 pt-44 text-center text-4xl font-bold uppdercase">PROJECTS</h3>
 			<ProjectCarousel />
 			<ScrollBox />
 			<Footer />

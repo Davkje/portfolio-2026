@@ -10,10 +10,17 @@
 @theme inline {
 	--color-background: var(--main-3);
 	--color-foreground: var(--main-2);
+	--color-gravel: var(--main-4);
+	--color-red: var(--main-1);
+
 	--font-jomolhari: var(--font-jomolhari);
 	--font-sans: var(--font-geist-sans);
 	--font-mono: var(--font-geist-mono);
 	--font-lora: var(--font-lora);
+	--font-lato: var(--font-lato);
+	--font-poppins: var(--font-poppins);
+	--font-open-sans: var(--font-open-sans);
+	--font-outfit: var(--font-outfit);
 }
 
 body {

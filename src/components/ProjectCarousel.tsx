@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import ProjectSlide, { Project } from "./ProjectSlide";
 import ProjectThumbnail from "./ProjectThumbnail";
 import portfolioData from "../data/portfolio.json";
+import { RiListCheck } from "@remixicon/react";
 
 const PROJECTS: Project[] = [...portfolioData.projects];
 
@@ -60,37 +61,43 @@ export default function ProjectCarousel() {
 	};
 
 	return (
-		<div className="font-sans mt-[7dvh] relative w-full flex flex-col-reverse md:gap-1 md:flex-row-reverse">
-			<main className="flex-1 min-w-0 flex flex-col gap-1">
-				{PROJECTS.map((p, i) => (
-					<ProjectSlide
-						key={p.id}
-						project={p}
-						index={i}
-						ref={(el) => {
-							sectionRefs.current[i] = el;
-						}}
-						imgRef={(el) => {
-							imgRefs.current[i] = el;
-						}}
-						onScrollTo={() => scrollTo(p.id, i)}
-					/>
-				))}
-			</main>
+		<>
+			<h2 className="text-[clamp(36px,3vw,44px)] text-left tracking-[0.02em] leading-[0.71] md:leading-normal uppercase px-4 md:pl-24 md:pb-2 pt-16">
+				Projects
+			</h2>
+			<div className="relative w-full flex flex-col-reverse md:gap-0 md:flex-row-reverse">
+				<main className="flex-1 min-w-0 flex flex-col gap-0 md:gap-16">
+					{PROJECTS.map((p, i) => (
+						<ProjectSlide
+							key={p.id}
+							project={p}
+							active={activeIndex === i}
+							index={i}
+							ref={(el) => {
+								sectionRefs.current[i] = el;
+							}}
+							imgRef={(el) => {
+								imgRefs.current[i] = el;
+							}}
+							onScrollTo={() => scrollTo(p.id, i)}
+						/>
+					))}
+				</main>
 
-			{/* <nav className="sticky top-0 md:top-[7dvh] h-31 gap-1 px-1 md:pr-0 pb-4 md:py-0 z-50 w-full md:w-32 md:h-[93dvh] flex md:flex-col md:justify-center bg-background overflow-x-auto md:overflow-visible scrollbar-none shrink-0"> */}
-			<nav className="sticky top-0 h-28 gap-1 md:pr-0 pb-1 px-1 md:p-0 z-50 w-full md:w-32 md:h-dvh flex md:flex-col md:justify-center bg-background overflow-x-auto md:overflow-visible scrollbar-none shrink-0">
-				{/* <div className="absolute hidden md:block top-[-7dvh] left-0 w-screen h-[7dvh] z-700 bg-background" /> */}
-				{PROJECTS.map((p, i) => (
-					<ProjectThumbnail
-						key={p.id}
-						project={p}
-						index={i}
-						active={activeIndex === i}
-						onClick={() => scrollTo(p.id, i)}
-					/>
-				))}
-			</nav>
-		</div>
+				<nav className="sticky top-0 h-24 gap-4 pb-1 px-4 md:px-2 z-50 w-full md:w-24 md:h-dvh flex md:flex-col md:justify-start overflow-x-auto md:overflow-visible scrollbar-none shrink-0 bg-background">
+					<RiListCheck className="my-2 mb-4 hidden md:block" />
+
+					{PROJECTS.map((p, i) => (
+						<ProjectThumbnail
+							key={p.id}
+							project={p}
+							index={i}
+							active={activeIndex === i}
+							onClick={() => scrollTo(p.id, i)}
+						/>
+					))}
+				</nav>
+			</div>
+		</>
 	);
 }

@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Jomolhari } from "next/font/google";
-import { Lora } from "next/font/google";
+import {
+	Geist,
+	Geist_Mono,
+	Jomolhari,
+	Lato,
+	Poppins,
+	Open_Sans,
+	Lora,
+	Outfit,
+} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
@@ -21,9 +29,33 @@ const jomolhari = Jomolhari({
 });
 
 const lora = Lora({
-	weight: ["400", "500", "600", "700"], // Här kommer det fungera!
+	weight: ["400", "500", "600", "700"],
 	subsets: ["latin"],
 	variable: "--font-lora",
+});
+
+const lato = Lato({
+	weight: ["400", "700"],
+	subsets: ["latin"],
+	variable: "--font-lato",
+});
+
+const poppins = Poppins({
+	weight: ["400", "500", "600", "700"],
+	subsets: ["latin"],
+	variable: "--font-poppins",
+});
+
+const outfit = Outfit({
+	weight: ["400", "500", "600", "700"],
+	subsets: ["latin"],
+	variable: "--font-outfit",
+});
+
+const openSans = Open_Sans({
+	weight: ["400", "500", "600", "700"],
+	subsets: ["latin"],
+	variable: "--font-open-sans",
 });
 
 export const metadata: Metadata = {
@@ -39,9 +71,9 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={`${geistSans.variable} ${geistMono.variable} ${jomolhari.variable} ${lora.variable} h-full antialiased bg-(--main-1) overflow-x-hidden`}
+			className={`${geistSans.variable} ${geistMono.variable} ${jomolhari.variable} ${lora.variable} ${lato.variable} ${poppins.variable} ${openSans.variable} ${outfit.variable} h-full antialiased bg-red overflow-x-hidden`}
 		>
-			<body className="min-h-full flex w-full flex-col font-jomolhari scroll-x-hidden">
+			<body className="min-h-full flex w-full flex-col font-poppins scroll-x-hidden">
 				<Navbar />
 				{children}
 			</body>
