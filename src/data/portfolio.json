@@ -1,0 +1,153 @@
+{
+	"personal": {
+		"name": "David Kjellstrand",
+		"role": "Front End Developer",
+		"bio": "Hi! I'm David, an aspiring Front End Developer and long time Writer/Producer. Right now I'm looking for an internship to further develop my skills in modern front end development and contribute to innovative and interesting projects. During the past 8 years as a signed and freelancing audio creator I've honed my creative and technical skills through working on multiple projects for artists, labels, commercials and tv.",
+		"about": {
+			"who": "Hi! I'm David Kjellstrand! An aspiring Front End Developer and former writer/producer with a passion for all things creative! During the past 8 years as a freelancing audio creator I've honed my creative, social and technical skills through working on multiple projects for artists, labels, commercials and tv.",
+			"what": "What am I doing? Well I'm trying a new path, moving away from music to coding, by studying Front End Development at Medieinstitutet and I'm looking for an internship for late 2025 and spring of 2026!",
+			"where": "Stockholm is home! Been spending the past year outside Karlstad while studying though!"
+		},
+		"location": "Stockholm, Sweden"
+	},
+	"contact": {
+		"email": "david.kjellstrand@gmail.com",
+		"phone": "+46 (0) 73 529 2002",
+		"linkedin": "https://www.linkedin.com/in/david-kjellstrand-b6760113a/",
+		"github": "https://github.com/Davkje"
+	},
+	"skills": {
+		"code": [
+			"HTML",
+			"CSS",
+			"TypeScript",
+			"React",
+			"Next.js",
+			"PHP",
+			"Vue",
+			"Vite",
+			"Algolia",
+			"Framer Motion",
+			"SQL"
+		],
+		"toolbox": [
+			"VS Code",
+			"Figma",
+			"Adobe Suite",
+			"GitHub",
+			"Prettier",
+			"ESLint",
+			"npm/pnpm",
+			"Lighthouse",
+			"Teams",
+			"Slack",
+			"Logic Pro",
+			"Wwise"
+		],
+		"practices": [
+			"UI/UX Basics",
+			"Wireframing",
+			"Prototyping",
+			"API Development",
+			"Design Systems",
+			"SEO",
+			"Agile/Scrum",
+			"Accessibility",
+			"Responsive Design",
+			"Cross-Browser Compatibility"
+		],
+		"upcoming": ["Next.js", "Three.js", "Testing"]
+	},
+	"projects": [
+		{
+			"id": "rainstorm",
+			"title": "Rainstorm",
+			"description": "A web-based ideation and writing tool that uses randomness and constraints to spark creativity.",
+			"about": "Rainstorm helps writers, musicians, and game designers move past the blank page. Inspired by roll-tables from tabletop RPGs like D&D, it combines random word generation with a drag-and-drop canvas to help you explore and organise ideas. Once you've gathered your words, switch to Define mode to add short notes and turn loose associations into a clear concept — then export as PDF, TXT, or copy to clipboard.",
+			"role": "Solo Developer & Designer",
+			"type": "Graduation Project",
+			"highlights": [
+				"Two-mode workflow: Ideate (drag-and-drop canvas) and Define (structured text)",
+				"Drag-and-drop built with dnd-kit, animations with Framer Motion, audio with Howler.js",
+				"Fully keyboard accessible, following the European Accessibility Act (2025) guidelines",
+				"Projects saved locally via localStorage — no backend, no accounts, instant onboarding"
+			],
+			"tags": ["TypeScript", "Next.js", "dnd-kit", "Framer Motion", "Howler.js", "Tailwind"],
+			"liveUrl": "https://rainstorm-project.vercel.app/",
+			"githubUrl": "https://github.com/Davkje/rainstorm-next",
+			"featured": true,
+			"img": "/assets/rain.png",
+			"altImg": "/assets/rainsecond.png",
+			"videoUrl": "/assets/rainstorm/rainhome.mov",
+			"altVideoUrl": "/assets/rainstorm/rainhome.mov",
+			"year": "2026",
+			"bg": "#18191c",
+			"accent": "#dcf3de"
+		},
+		{
+			"id": "papercut",
+			"title": "Papercut",
+			"description": "Revamped bookshop's WooCommerce store with improved search, filtering and checkout.",
+			"about": "Papercut is an independent bookshop in Stockholm. I was brought in to modernise their existing WordPress/WooCommerce site — overhauling the search experience, adding faceted filtering, and improving the overall design and checkout flow.",
+			"role": "Developer & Designer Intern at Afonso",
+			"type": "Client Work",
+			"highlights": [
+				"Built a custom WordPress plugin with React and GraphQL",
+				"Integrated Algolia for fast, faceted search and filtering",
+				"Improved checkout UX and overall site design"
+			],
+			"tags": ["PHP", "WordPress", "React", "WooCommerce", "GraphQL", "Algolia"],
+			"liveUrl": "https://papercutshop.se/",
+			"githubUrl": "",
+			"featured": true,
+			"img": "/assets/papercut/papershelf.jpg",
+			"videoUrl": "",
+			"altImg": "",
+			"altVideoUrl": "",
+			"year": "2025-2026",
+			"bg": "#18191c",
+			"accent": "#dcf3de"
+		},
+		{
+			"id": "demokrati-uppropet",
+			"title": "Demokrati Uppropet",
+			"description": "Campaign site for a democratic manifesto — built and launched in two days.",
+			"about": "A one-page campaign site for Kristna Fredsrörelsen, gathering signatures and spreading a democratic manifesto ahead of Sweden's 2026 election. Built headless with Next.js, the site prioritises readability and reach — with Web Share API integration so visitors can easily spread the message across platforms.",
+			"role": "Developer, Intern at Afonso",
+			"type": "Client Work",
+			"highlights": [
+				"Designed and built in two days to meet a tight campaign deadline",
+				"Web Share API integration to help visitors spread the manifesto",
+				"Clean, readable layout focused on content and message over aesthetics"
+			],
+			"tags": ["TypeScript", "Next.js", "Headless", "Web Share API", "Framer Motion"],
+			"liveUrl": "https://demokratiuppropet.se/",
+			"githubUrl": "",
+			"featured": false,
+			"img": "/assets/demokrati.png",
+			"altImg": "/assets/demokrati.png",
+			"year": "2025",
+			"bg": "#18191c",
+			"accent": "#dcf3de"
+		}
+	],
+	"education": [
+		{
+			"school": "Medieinstitutet",
+			"degree": "Front End Development",
+			"location": "Sweden",
+			"startYear": 2024,
+			"endYear": 2026,
+			"current": true
+		}
+	],
+	"experience": [
+		{
+			"role": "Songwriter & Producer",
+			"company": "Self-employed",
+			"startYear": 2016,
+			"endYear": "Current",
+			"description": "Signed and freelancing music creator. Worked on projects for artists, labels, commercials and tv."
+		}
+	]
+}

@@ -2,18 +2,16 @@ import Link from "next/link";
 
 export default function Navbar() {
 	return (
-		<nav className="flex justify-end items-center p-6 max-full">
-			<div className="space-x-8">
-				<Link href="/" className="hover:text-blue-400 transition">
-					Portfolio
-				</Link>
-				<Link href="/cv" className="hover:text-blue-400 transition">
-					CV
-				</Link>
-				<Link href="/about" className="hover:text-blue-400 transition">
-					About
-				</Link>
-			</div>
+		<nav className="fixed top-0 left-0 flex gap-3 md:gap-5 justify-end items-center py-4 px-6 w-full z-900 uppercase tracking-wider">
+			<Link href="/" className="hover:opacity-50 transition">
+				Portfolio
+			</Link>
+			<Link href="/cv" className="hover:opacity-50 transition">
+				CV
+			</Link>
+			<Link href="/about" className="hover:opacity-50 transition">
+				About
+			</Link>
 		</nav>
 	);
 }
