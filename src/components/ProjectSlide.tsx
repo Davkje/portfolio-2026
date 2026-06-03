@@ -8,7 +8,7 @@ import {
 	RiArrowUpSFill,
 	RiSubtractLine,
 } from "@remixicon/react";
-import { AnimatePresence, motion, useInView } from "framer-motion";
+import { AnimatePresence, motion, useInView, Variants } from "framer-motion";
 import Image from "next/image";
 import { forwardRef, useRef, useState } from "react";
 
@@ -85,6 +85,17 @@ function MobilePanel({ p, expanded, onToggle }: PanelProps) {
 				<p className="text-base leading-relaxed" style={{ color: p.accent }}>
 					{p.description}
 				</p>
+				<div className="flex flex-wrap gap-2">
+					{p.tags.map((t) => (
+						<span
+							key={t}
+							className="text-xs tracking-widest uppercase text-center grow px-4 py-2 select-none"
+							style={{ color: p.accent, backgroundColor: `${p.accent}10` }}
+						>
+							{t}
+						</span>
+					))}
+				</div>
 
 				{/* Show more */}
 				<div className="flex flex-col">
@@ -156,20 +167,7 @@ function MobilePanel({ p, expanded, onToggle }: PanelProps) {
 					</AnimatePresence>
 				</div>
 
-				{/* Tags */}
-				<div className="grid gap-2 md:pb-4">
-					<div className="flex flex-wrap gap-2">
-						{p.tags.map((t) => (
-							<span
-								key={t}
-								className="text-xs tracking-widest uppercase text-center grow px-4 py-2 select-none"
-								style={{ color: p.accent, backgroundColor: `${p.accent}10` }}
-							>
-								{t}
-							</span>
-						))}
-					</div>
-
+				<div className="grid gap-2 md:pb-4 text-xl">
 					{p.liveUrl && (
 						<a
 							href={p.liveUrl}
@@ -244,6 +242,20 @@ function DesktopPanel({ p, expanded, onToggle }: PanelProps) {
 					<p className="text-lg leading-relaxed" style={{ color: p.accent }}>
 						{p.description}
 					</p>
+					<div className="flex flex-wrap gap-2">
+						{p.tags.map((t) => (
+							<span
+								key={t}
+								className="text-sm tracking-widest uppercase text-center grow px-4 py-2 select-none"
+								style={{
+									color: p.accent,
+									backgroundColor: `${p.accent}20`,
+								}}
+							>
+								{t}
+							</span>
+						))}
+					</div>
 					<button
 						onClick={onToggle}
 						className="flex gap-2 max-w-min text-md justify-start items-center text-center tracking-widest hover:underline hover:opacity-80 transition-opacity"
@@ -264,28 +276,12 @@ function DesktopPanel({ p, expanded, onToggle }: PanelProps) {
 					</button>
 
 					<div className="grid gap-2 mt-auto">
-						<div className="flex flex-wrap gap-2">
-							{p.tags.map((t) => (
-								<span
-									key={t}
-									className="text-sm tracking-widest uppercase text-center grow px-4 py-2 select-none"
-									style={{
-										color: p.accent,
-										// borderColor: `${p.accent}50`,
-										backgroundColor: `${p.accent}20`,
-									}}
-								>
-									{t}
-								</span>
-							))}
-						</div>
-
 						{p.liveUrl && (
 							<a
 								href={p.liveUrl}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="text-center tracking-widest uppercase px-4 py-4 border hover:opacity-80 transition-opacity text-lg"
+								className="text-center tracking-widest uppercase px-4 py-4 border hover:opacity-80 transition-opacity text-xl"
 								style={{ color: p.bg, backgroundColor: `${p.accent}` }}
 							>
 								Live
@@ -296,7 +292,7 @@ function DesktopPanel({ p, expanded, onToggle }: PanelProps) {
 								href={p.githubUrl}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="text-center tracking-widest uppercase px-4 py-4 border hover:opacity-80 transition-opacity text-lg"
+								className="text-center tracking-widest uppercase px-4 py-4 border hover:opacity-80 transition-opacity text-xl"
 								style={{ color: p.bg, backgroundColor: `${p.accent}` }}
 							>
 								Repo
@@ -318,7 +314,7 @@ function DesktopPanel({ p, expanded, onToggle }: PanelProps) {
 						className="hidden md:block relative z-10 shrink-0 h-[90dvh] overflow-hidden "
 						style={{ background: `${p.bg}` }}
 					>
-						<div className="w-[calc(45dvw-3rem)] p-4 pl-0 flex flex-col gap-6">
+						<div className="w-[calc(45dvw-3rem)] py-4 pl-2 pr-6 flex flex-col gap-6">
 							<div className="flex flex-col gap-3">
 								<h4
 									className="text-md tracking-widest uppercase opacity-70"
@@ -370,15 +366,33 @@ interface ProjectSlideProps {
 	index: number;
 	imgRef?: React.RefCallback<HTMLDivElement>;
 	onScrollTo?: () => void;
-	active: boolean;
 }
 
 const ProjectSlide = forwardRef<HTMLDivElement, ProjectSlideProps>(
-	({ project: p, index: i, active }, ref) => {
+	({ project: p, index: i }, ref) => {
 		const [expanded, setExpanded] = useState(false);
 		const toggle = () => setExpanded((v) => !v);
 		const borderRef = useRef(null);
 		const isInView = useInView(borderRef, { margin: "-70% 0px -30% 0px" });
+		const borderVariants: Variants = {
+			initial: {
+				scaleY: 0,
+			},
+			animate: {
+				scaleY: 1,
+				transition: {
+					duration: 3,
+					ease: [0.16, 1, 0.3, 1],
+				},
+			},
+			exit: {
+				opacity: 0,
+				transition: {
+					duration: 0.5,
+					ease: "easeOut",
+				},
+			},
+		};
 
 		return (
 			<section
@@ -396,10 +410,10 @@ const ProjectSlide = forwardRef<HTMLDivElement, ProjectSlideProps>(
 							<motion.div
 								key="border"
 								className="absolute inset-0 origin-top"
-								initial={{ scaleY: 0 }}
-								animate={{ scaleY: 1 }}
-								exit={{ opacity: 0 }}
-								transition={{ duration: 3, ease: [0.16, 1, 0.3, 1] }}
+								variants={borderVariants}
+								initial="initial"
+								animate="animate"
+								exit="exit"
 								style={{ backgroundColor: "var(--color-foreground)" }}
 							/>
 						)}
@@ -411,7 +425,7 @@ const ProjectSlide = forwardRef<HTMLDivElement, ProjectSlideProps>(
 
 				{/* Media */}
 				<button
-					className={`relative w-full md:flex-1 overflow-hidden transition-all  ${!expanded ? "h-[30dvh] md:h-[90dvh]" : "h-[10dvh] md:h-[90dvh]"}`}
+					className={`relative w-full md:flex-1 overflow-hidden transition-all ease-[cubic-bezier(0.32,0.72,0,1)] duration-400 ${!expanded ? "h-[30dvh] md:h-[90dvh]" : "h-[10dvh] md:h-[90dvh]"}`}
 					onClick={toggle}
 					aria-expanded={expanded}
 				>
