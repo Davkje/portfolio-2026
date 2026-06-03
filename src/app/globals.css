@@ -5,6 +5,7 @@
 	--main-2: #dcf3de;
 	--main-3: #18191c;
 	--main-4: #28292d;
+	--main-5: #eb3a3a;
 }
 
 @theme inline {
@@ -12,6 +13,7 @@
 	--color-foreground: var(--main-2);
 	--color-gravel: var(--main-4);
 	--color-red: var(--main-1);
+	--color-red-texture: var(--main-5);
 
 	--font-jomolhari: var(--font-jomolhari);
 	--font-sans: var(--font-geist-sans);

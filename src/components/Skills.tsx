@@ -7,7 +7,8 @@ export default function Skills() {
 	const doubled = [...skills, ...skills];
 
 	return (
-		<section className="bg-background w-full overflow-hidden py-6">
+		<section className="bg-background w-full overflow-hidden py-6 bg-gravel">
+			<h2 className="text-[clamp(36px,3vw,44px)] text-center tracking-wide uppercase">Skills</h2>
 			<div
 				className="flex gap-4 md:gap-11 whitespace-nowrap"
 				style={{ animation: "marquee 24s linear infinite" }}

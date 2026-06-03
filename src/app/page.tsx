@@ -1,6 +1,6 @@
 import Hero from "@/components/Hero";
 import Hello from "@/components/Hello";
-import Skills from "@/components/Skills";
+import SkillsScroll from "@/components/SkillsScroll";
 import ScrollBox from "@/components/ScrollBox";
 import Footer from "@/components/Footer";
 import ProjectCarousel from "@/components/ProjectCarousel";
@@ -10,9 +10,9 @@ export default function Home() {
 		<main className="w-full">
 			<Hero />
 			<Hello />
-			<Skills />
 			<ProjectCarousel />
-			<ScrollBox />
+			<SkillsScroll />
+			{/* <ScrollBox /> */}
 			<Footer />
 		</main>
 	);

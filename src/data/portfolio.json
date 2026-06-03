@@ -2,11 +2,11 @@
 	"personal": {
 		"name": "David Kjellstrand",
 		"role": "Front End Developer",
-		"bio": "Hi! I'm David, an aspiring Front End Developer and long time Writer/Producer. Right now I'm looking for an internship to further develop my skills in modern front end development and contribute to innovative and interesting projects. During the past 8 years as a signed and freelancing audio creator I've honed my creative and technical skills through working on multiple projects for artists, labels, commercials and tv.",
+		"bio": "Hi! I'm David, Front End Developer and long time Writer & Producer and I'm currently looking for work! During the past 9 years as a signed and freelancing audio creator I've honed my creative and technical skills through working on multiple projects for artists, labels, commercials and tv.",
 		"about": {
-			"who": "Hi! I'm David Kjellstrand! An aspiring Front End Developer and former writer/producer with a passion for all things creative! During the past 8 years as a freelancing audio creator I've honed my creative, social and technical skills through working on multiple projects for artists, labels, commercials and tv.",
-			"what": "What am I doing? Well I'm trying a new path, moving away from music to coding, by studying Front End Development at Medieinstitutet and I'm looking for an internship for late 2025 and spring of 2026!",
-			"where": "Stockholm is home! Been spending the past year outside Karlstad while studying though!"
+			"who": "Hi! I'm David Kjellstrand! Front End Developer and former writer/producer with a passion for all things creative! During the past 9 years as a freelancing audio creator I've honed my creative, social and technical skills through working on multiple projects for artists, labels, commercials and tv.",
+			"what": "What am I doing? Well I'm trying a new path, moving away from music to coding. I have recently graduated the Front End Development program at Medieinstitutet and I'm currently looking for work!",
+			"where": "Stockholm is home!"
 		},
 		"location": "Stockholm, Sweden"
 	},
@@ -23,40 +23,44 @@
 			"TypeScript",
 			"React",
 			"Next.js",
+			"Tailwind",
 			"PHP",
 			"Vue",
-			"Vite",
+			"GraphQL",
+			"SQL",
 			"Algolia",
 			"Framer Motion",
-			"SQL"
+			"Howler.js"
 		],
 		"toolbox": [
 			"VS Code",
 			"Figma",
+			"Wordpress",
+			"Supabase",
+			"Vercel",
 			"Adobe Suite",
+			"git",
 			"GitHub",
-			"Prettier",
-			"ESLint",
-			"npm/pnpm",
+			"Bitbucket",
 			"Lighthouse",
-			"Teams",
-			"Slack",
-			"Logic Pro",
-			"Wwise"
+			"Silktide",
+			"Browserstack",
+			"npm/pnpm"
 		],
 		"practices": [
-			"UI/UX Basics",
+			"Testing",
 			"Wireframing",
+			"UI/UX",
 			"Prototyping",
 			"API Development",
+			"Component-driven development",
 			"Design Systems",
 			"SEO",
 			"Agile/Scrum",
 			"Accessibility",
 			"Responsive Design",
 			"Cross-Browser Compatibility"
-		],
-		"upcoming": ["Next.js", "Three.js", "Testing"]
+		]
 	},
 	"projects": [
 		{
@@ -126,6 +130,30 @@
 			"featured": false,
 			"img": "/assets/demokrati.png",
 			"altImg": "/assets/demokrati.png",
+			"year": "2025",
+			"bg": "#18191c",
+			"accent": "#dcf3de"
+		},
+		{
+			"id": "ligan",
+			"title": "Ligan",
+			"description": "Claude Code experiment - Fullstack league tracker for our hobbygaming group.",
+			"about": "Ligan is a fullstack web app built to track results, standings, and achievements in a private Magic: The Gathering Commander league. The project is intentionally built almost entirely through AI-assisted prompting using Claude Code to explore AI workflows. The result is a real, working product used by real people, and a hands-on understanding of where AI shines and where you still need to think for yourself.",
+			"role": "Solo Developer",
+			"type": "Hobby Project",
+			"highlights": [
+				"Built end-to-end with Claude as a coding partner — a deliberate experiment in AI-assisted development",
+				"Fullstack app using Supabase, Next.js App Router and server-side authentication",
+				"Dynamic achievement system — Hot Streak, Underdog, Fallen from Grace and more"
+			],
+			"tags": ["Claude", "Supabase", "TypeScript", "Next.js", "Tailwind", "Framer Motion"],
+			"liveUrl": "https://mtg-ligan.vercel.app/",
+			"githubUrl": "https://github.com/Davkje/mtg-ligan",
+			"featured": false,
+			"img": "/assets/ligan/ligan.png",
+			"altImg": "",
+			"videoUrl": "",
+			"altVideoUrl": "",
 			"year": "2025",
 			"bg": "#18191c",
 			"accent": "#dcf3de"

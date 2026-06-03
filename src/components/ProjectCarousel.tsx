@@ -62,7 +62,7 @@ export default function ProjectCarousel() {
 
 	return (
 		<>
-			<h2 className="text-[clamp(36px,3vw,44px)] text-left tracking-[0.02em] leading-[0.71] md:leading-normal uppercase px-4 md:pl-24 md:pb-2 pt-16">
+			<h2 className="hidden md:block text-[clamp(36px,3vw,44px)] text-left tracking-[0.02em] leading-[0.71] md:leading-normal uppercase px-4 pl-[93px] pb-2 pt-16">
 				Projects
 			</h2>
 			<div className="relative w-full flex flex-col-reverse md:gap-0 md:flex-row-reverse">
@@ -71,7 +71,6 @@ export default function ProjectCarousel() {
 						<ProjectSlide
 							key={p.id}
 							project={p}
-							active={activeIndex === i}
 							index={i}
 							ref={(el) => {
 								sectionRefs.current[i] = el;
@@ -84,18 +83,43 @@ export default function ProjectCarousel() {
 					))}
 				</main>
 
-				<nav className="sticky top-0 h-24 gap-4 pb-1 px-4 md:px-2 z-50 w-full md:w-24 md:h-dvh flex md:flex-col md:justify-start overflow-x-auto md:overflow-visible scrollbar-none shrink-0 bg-background">
-					<RiListCheck className="my-2 mb-4 hidden md:block" />
+				<nav className="sticky top-0 h-26 pb-1 px-4 md:px-4 z-700 w-full md:w-24 md:h-dvh flex md:flex-col md:justify-start overflow-x-auto md:overflow-visible scrollbar-none shrink-0 bg-background">
+					<div className="relative md:static shrink-0">
+						<a
+							href={`#${PROJECTS[0]?.id}`}
+							className="hidden md:block" // Flyttade hidden hit för renare flex-hantering
+							onClick={(e) => {
+								e.preventDefault();
+								if (PROJECTS[0]) scrollTo(PROJECTS[0].id, 0);
+							}}
+						>
+							<RiListCheck className="my-4" />
+						</a>
 
-					{PROJECTS.map((p, i) => (
-						<ProjectThumbnail
-							key={p.id}
-							project={p}
-							index={i}
-							active={activeIndex === i}
-							onClick={() => scrollTo(p.id, i)}
-						/>
-					))}
+						<h2 className="block md:hidden absolute tracking-wider leading-normal top-0 left-0 py-4 text-md uppercase z-800">
+							<a
+								href={`#${PROJECTS[0]?.id}`}
+								onClick={(e) => {
+									e.preventDefault();
+									if (PROJECTS[0]) scrollTo(PROJECTS[0].id, 0);
+								}}
+							>
+								Projects
+							</a>
+						</h2>
+					</div>
+
+					<div className="flex md:flex-col gap-4 w-full justify-between">
+						{PROJECTS.map((p, i) => (
+							<ProjectThumbnail
+								key={p.id}
+								project={p}
+								index={i}
+								active={activeIndex === i}
+								onClick={() => scrollTo(p.id, i)}
+							/>
+						))}
+					</div>
 				</nav>
 			</div>
 		</>
