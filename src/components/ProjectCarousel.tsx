@@ -83,11 +83,11 @@ export default function ProjectCarousel() {
 					))}
 				</main>
 
-				<nav className="sticky top-0 h-26 pb-1 px-4 md:px-4 z-700 w-full md:w-24 md:h-dvh flex md:flex-col md:justify-start overflow-x-auto md:overflow-visible scrollbar-none shrink-0 bg-background">
+				<nav className="sticky top-0 h-26 pb-1 px-4 md:px-4 z-700 w-full md:w-24 md:h-screen flex md:flex-col md:justify-start overflow-x-auto md:overflow-visible scrollbar-none shrink-0 bg-background">
 					<div className="relative md:static shrink-0">
 						<a
 							href={`#${PROJECTS[0]?.id}`}
-							className="hidden md:block" // Flyttade hidden hit för renare flex-hantering
+							className="hidden md:block"
 							onClick={(e) => {
 								e.preventDefault();
 								if (PROJECTS[0]) scrollTo(PROJECTS[0].id, 0);

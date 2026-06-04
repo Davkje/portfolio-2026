@@ -70,21 +70,19 @@ function MobilePanel({ p, expanded, onToggle }: PanelProps) {
 						</span>
 					</button>
 
-					{/* Meta */}
-					<div
-						className="flex flex-col gap-1 text-sm font-light tracking-wider opacity-70"
-						style={{ color: p.accent }}
-					>
-						<p>{p.type}</p>
-						<p>{p.role}</p>
-						<p>{p.year}</p>
-					</div>
+					<p className="text-base leading-relaxed" style={{ color: p.accent }}>
+						{p.description}
+					</p>
+				</div>
+				<div
+					className="flex flex-col gap-1 text-sm font-light tracking-wider opacity-70"
+					style={{ color: p.accent }}
+				>
+					<p>{p.type}</p>
+					<p>{p.role}</p>
+					<p>{p.year}</p>
 				</div>
 
-				{/* Description */}
-				<p className="text-base leading-relaxed" style={{ color: p.accent }}>
-					{p.description}
-				</p>
 				<div className="flex flex-wrap gap-2">
 					{p.tags.map((t) => (
 						<span
@@ -206,7 +204,7 @@ function DesktopPanel({ p, expanded, onToggle }: PanelProps) {
 		<>
 			{/* Main column */}
 			<div
-				className="hidden md:flex relative z-10 w-[35dvw] h-[90dvh] flex-col justify-between px-4 shrink-0 min-w-90"
+				className="hidden md:flex relative z-10 w-[35vw] h-[90vh] flex-col justify-between px-4 shrink-0 min-w-90"
 				style={{ background: p.bg }}
 			>
 				<div className="flex flex-col gap-6 h-full">
@@ -230,18 +228,18 @@ function DesktopPanel({ p, expanded, onToggle }: PanelProps) {
 							</span>
 						</button>
 
-						<div
-							className="flex flex-col gap-1 text-md font-light tracking-wider opacity-70"
-							style={{ color: p.accent }}
-						>
-							<p>{p.type}</p>
-							<p>{p.role}</p>
-							<p>{p.year}</p>
-						</div>
+						<p className="text-lg leading-relaxed" style={{ color: p.accent }}>
+							{p.description}
+						</p>
 					</div>
-					<p className="text-lg leading-relaxed" style={{ color: p.accent }}>
-						{p.description}
-					</p>
+					<div
+						className="flex flex-col gap-1 text-md font-light tracking-wider opacity-70"
+						style={{ color: p.accent }}
+					>
+						<p>{p.type}</p>
+						<p>{p.role}</p>
+						<p>{p.year}</p>
+					</div>
 					<div className="flex flex-wrap gap-2">
 						{p.tags.map((t) => (
 							<span
@@ -311,7 +309,7 @@ function DesktopPanel({ p, expanded, onToggle }: PanelProps) {
 						animate={{ width: "auto", opacity: 1 }}
 						exit={{ width: 0, opacity: 0 }}
 						transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-						className="hidden md:block relative z-10 shrink-0 h-[90dvh] overflow-hidden "
+						className="hidden md:block relative z-10 shrink-0 h-[90vh] overflow-hidden "
 						style={{ background: `${p.bg}` }}
 					>
 						<div className="w-[calc(45dvw-3rem)] py-4 pl-2 pr-6 flex flex-col gap-6">
@@ -398,7 +396,7 @@ const ProjectSlide = forwardRef<HTMLDivElement, ProjectSlideProps>(
 			<section
 				id={p.id}
 				ref={ref}
-				className="relative w-full flex flex-col-reverse md:flex-row scroll-mt-[15dvh] md:scroll-mt-[7dvh] overflow-hidden md:pr-4"
+				className="relative w-full flex flex-col-reverse md:flex-row scroll-mt-[15vh] md:scroll-mt-[7vh] overflow-hidden md:pr-4"
 				style={{
 					backgroundColor: `${p.bg}`,
 				}}
@@ -425,7 +423,7 @@ const ProjectSlide = forwardRef<HTMLDivElement, ProjectSlideProps>(
 
 				{/* Media */}
 				<button
-					className={`relative w-full md:flex-1 overflow-hidden transition-all ease-[cubic-bezier(0.32,0.72,0,1)] duration-400 ${!expanded ? "h-[30dvh] md:h-[90dvh]" : "h-[10dvh] md:h-[90dvh]"}`}
+					className={`relative w-full md:flex-1 overflow-hidden transition-all ease-[cubic-bezier(0.32,0.72,0,1)] duration-400 ${!expanded ? "h-[30vh] md:h-[90vh]" : "h-[10vh] md:h-[90vh]"}`}
 					onClick={toggle}
 					aria-expanded={expanded}
 				>
@@ -448,22 +446,7 @@ const ProjectSlide = forwardRef<HTMLDivElement, ProjectSlideProps>(
 						/>
 					)}
 					{/* 
-					{expanded && (p.altVideoUrl || p.altImg) && (
-						<div className="absolute inset-0">
-							{p.altVideoUrl ? (
-								<video
-									src={p.altVideoUrl}
-									autoPlay
-									muted
-									loop
-									playsInline
-									className="w-full h-full object-cover object-top"
-								/>
-							) : (
-								<Image src={p.altImg!} alt={p.title} fill className="object-cover object-top" />
-							)}
-						</div>
-					)} */}
+					
 					{/* OVERLAY */}
 					<div
 						className={`absolute inset-0 bg-black/60 z-10 transition-opacity duration-400 ease-in-out ${!expanded && "opacity-0"}`}

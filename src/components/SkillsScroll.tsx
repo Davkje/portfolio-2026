@@ -32,8 +32,8 @@ export default function SkillsScroll() {
 	});
 
 	return (
-		<div ref={containerRef} className="relative w-full h-[300dvh] bg-background mt-0 md:mt-12">
-			<div className="sticky top-0 h-dvh md:h-dvh overflow-hidden flex flex-col justify-center">
+		<div ref={containerRef} className="relative w-full h-[300vh] bg-background mt-0 md:mt-12">
+			<div className="sticky top-0 h-screen md:h-screen overflow-hidden flex flex-col justify-center">
 				<motion.div
 					style={{ opacity: scrollTextOpacity }}
 					className="absolute inset-0 z-5 flex items-center justify-center pointer-events-none"
@@ -72,43 +72,3 @@ export default function SkillsScroll() {
 		</div>
 	);
 }
-
-// export default function SkillsScroll() {
-// 	const containerRef = useRef<HTMLDivElement>(null);
-// 	const [visibleCount, setVisibleCount] = useState(0);
-
-// 	const { scrollYProgress } = useScroll({
-// 		target: containerRef,
-// 		offset: ["start start", "end end"],
-// 	});
-
-// 	const smoothProgress = useSpring(scrollYProgress, {
-// 		stiffness: 400,
-// 		damping: 40,
-// 		restDelta: 0.001,
-// 	});
-
-// 	const scrollTextOpacity = useTransform(smoothProgress, [0, 0.12], [1, 0]);
-
-// 	useMotionValueEvent(smoothProgress, "change", (v) => {
-// 		setVisibleCount(Math.round(v * SKILLS.length));
-// 	});
-
-// 	return (
-// 		<div ref={containerRef} className="relative w-full h-[300dvh] bg-background mt-12">
-// 			<div className="sticky top-0 h-dvh overflow-hidden flex flex-col justify-center">
-// 				{/* Header — z-10, alltid synlig ovanpå */}
-// 				<h2 className="absolute top-0 left-0 z-10 p-4 md:px-6 tracking-wider leading-normal uppercase text-foreground">
-// 					Skills
-// 					<span className="ml-4 font-mono text-sm text-foreground/60 tabular-nums">
-// 						{visibleCount} / {SKILLS.length}
-// 					</span>
-// 				</h2>
-
-// 				{/* "Scroll..." — z-5, tonar bort bakom headern */}
-// 				<motion.div
-// 					style={{ opacity: scrollTextOpacity }}
-// 					className="absolute inset-0 z-5 flex items-center justify-center pointer-events-none"
-// 				>
-// 					<span className="text-2xl uppercase tracking-wider text-foreground">Scroll...</span>
-// 				</motion.div>

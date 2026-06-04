@@ -30,10 +30,10 @@ export default function ScrollBox() {
 	return (
 		<div
 			ref={containerRef}
-			className="relative flex place-content-center p-6 w-full bg-background h-[300dvh]"
+			className="relative flex place-content-center p-6 w-full bg-background h-[300vh]"
 		>
 			<div className="w-full relative">
-				<div className="h-dvh flex justify-center items-center sticky top-0 overflow-hidden">
+				<div className="h-vh flex justify-center items-center sticky top-0 overflow-hidden">
 					<div className="absolute left-0 right-0 flex items-center gap-3">
 						<div className="flex-1 h-2 rounded-full overflow-hidden">
 							<motion.div

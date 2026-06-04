@@ -1,6 +1,6 @@
 export default function Footer() {
 	return (
-		<div className="text-center flex flex-col justify-center items-center w-full bg-red min-h-[50dvh] p-4 gap-4">
+		<div className="text-center flex flex-col justify-center items-center w-full bg-red min-h-[50vh] p-4 gap-4">
 			<h3 className="text-6xl uppercase">Lets Talk!</h3>
 			<div className="flex flex-col justify-center items-center gap-6">
 				<div className="flex gap-6">
