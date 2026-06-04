@@ -24,7 +24,7 @@ function AnimatedBlock({ children, delay = 0 }: { children: React.ReactNode; del
 
 export default function Hello() {
 	return (
-		<section className="min-h-[70dvh] place-content-center-safe">
+		<section className="min-h-[70vh] place-content-center-safe">
 			<div className="relative w-full h-full place-content-center max-w-350 mx-auto place-items-center flex flex-col md:flex-row gap-6 md:justify-between p-4 md:p-12">
 				<div className="white-space z-300 text-[clamp(20px,6vw,44px)] md:max-w-[48vw] relative flex flex-col gap-2 md:gap-4 items-start justify-center">
 					<p className="uppercase text-[clamp(36px,3vw,44px)]">Get to know me</p>

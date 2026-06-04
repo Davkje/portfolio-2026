@@ -12,7 +12,7 @@ export default function Hero() {
 				}}
 			/>
 
-			<div className="z-2 flex flex-col justify-between items-center relative w-full min-h-dvh">
+			<div className="z-2 flex flex-col justify-between items-center relative w-full min-h-screen">
 				<div className="absolute right-6 top-20 flex items-center gap-4 text-foreground z-100">
 					<a
 						href="https://www.linkedin.com/in/david-kjellstrand-b6760113a/"
