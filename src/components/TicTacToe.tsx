@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { useSparkles } from "./Sparkle";
 
 const LINES = [
 	[0, 1, 2],
@@ -69,6 +70,9 @@ export default function TicTacToe() {
 	const [bouncing, setBouncing] = useState(false);
 	const [exiting, setExiting] = useState(false);
 
+	const gridRef = useRef<HTMLDivElement>(null);
+	const { burst, SparkleLayer } = useSparkles(gridRef);
+
 	const winner = getWinner(board);
 	const isDraw = !winner && board.every(Boolean);
 	const done = !!(winner || isDraw);
@@ -120,8 +124,9 @@ export default function TicTacToe() {
 		};
 	}, [done]);
 
-	const handleClick = (i: number) => {
+	const handleClick = (i: number, e: React.MouseEvent) => {
 		if (!playerTurn || board[i] || done) return;
+		burst(e);
 		setBoard((prev) => {
 			const n = [...prev];
 			n[i] = "X";
@@ -143,6 +148,7 @@ export default function TicTacToe() {
 	return (
 		<div className="flex flex-col items-center gap-1.5 select-none">
 			<div
+				ref={gridRef}
 				className="relative"
 				style={{
 					width: 150,
@@ -157,7 +163,7 @@ export default function TicTacToe() {
 					{board.map((_, i) => (
 						<button
 							key={i}
-							onClick={() => handleClick(i)}
+							onClick={(e) => handleClick(i, e)}
 							className="flex items-center justify-center cursor-pointer"
 						>
 							{marks[i] && (
@@ -186,8 +192,8 @@ export default function TicTacToe() {
 						</button>
 					))}
 				</div>
+				{SparkleLayer}
 			</div>
-			{/* <span className="uppercase whitespace-nowrap">This is a game</span> */}
 		</div>
 	);
 }

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import TicTacToe from "./TicTacToe";
+import Piano from "./Piano";
 
 const profilePhoto = "/assets/davidright.png";
 
@@ -58,10 +59,10 @@ export default function Hello() {
 							</a>
 						</p>
 						<p>
-							9+ years in the music bussiness working on multiple projects for artists, labels,
+							9+ years in the music business working on multiple projects for artists, labels,
 							commercials and tv.
 						</p>
-						<p>Love games, art, music, evrything nerdy and sauerkraut!</p>
+						<p>Love games, art, music, sauerkraut and everything nerdy!</p>
 					</div>
 				</div>
 
@@ -89,6 +90,7 @@ export default function Hello() {
 						src={profilePhoto}
 						alt="David Kjellstrand"
 						className="w-full h-full max-h-80 md:max-h-none object-contain md:object-cover"
+						priority
 						width={544}
 						height={776}
 					/>
@@ -96,8 +98,11 @@ export default function Hello() {
 						this is me
 					</span> */}
 				</motion.div>
-				<div className="max-w-min z-90 absolute rotate-340 left-10 -bottom-30 md:left-20 md:-bottom-40 md:p-6 scale-100 hover:scale-110 transition-all duration-300 ease-out">
+				<div className="max-w-min z-90 absolute rotate-0 left-10 -bottom-30 md:left-20 md:-bottom-40 md:p-6 scale-100 hover:scale-110 transition-all duration-300 ease-out">
 					<TicTacToe />
+				</div>
+				<div className="z-90 absolute rotate-6 right-4 -bottom-20 md:left-100 md:right-auto md:-bottom-62 md:p-6 scale-100 hover:scale-105 transition-all duration-300 ease-out">
+					<Piano />
 				</div>
 			</div>
 		</section>
