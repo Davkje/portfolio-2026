@@ -61,13 +61,18 @@ export default function Hero() {
 						<p>THERE</p>
 					</div>
 				</div>
-				<div className="flex flex-col items-center uppercase whitespace-nowrap text-center pb-40 md:pb-24">
+
+				<div className="relative flex flex-col items-center uppercase whitespace-nowrap text-center pb-40 md:pb-24">
 					<h1 className="text-[clamp(36px,4vw,64px)]">The Portfolio</h1>
 					<div className="flex flex-col items-center gap-1 mt-3 text-[clamp(14px,1.2vw,20px)]">
 						<p>By David Kjellstrand</p>
 						<p>Front End Developer</p>
 						<p>IN STHLM</p>
 					</div>
+				</div>
+
+				<div className="max-w-min max-h-min z-90 absolute rotate-10 right-4 top-1/2 -translate-y-1/2 md:right-16 md:p-6 scale-75 md:scale-100 md:hover:scale-110 transition-all duration-300 ease-out">
+					<TicTacToe />
 				</div>
 			</div>
 		</section>

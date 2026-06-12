@@ -66,15 +66,16 @@
 		{
 			"id": "rainstorm",
 			"title": "Rainstorm",
-			"description": "A web-based ideation and writing tool that uses randomness and constraints to spark creativity.",
-			"about": "Rainstorm helps writers, musicians, and game designers move past the blank page. Inspired by roll-tables from tabletop RPGs like D&D, it combines random word generation with a drag-and-drop canvas to help you explore and organise ideas. Once you've gathered your words, switch to Define mode to add short notes and turn loose associations into a clear concept — then export as PDF, TXT, or copy to clipboard.",
+			"description": "Web-based ideation and writing tool using randomization and intentional constraints to spark creativity.",
+			"about": "Rainstorm helps writers, musicians and other creatives move past the blank page. Inspired by roll-tables from tabletop RPGs, it combines random word generation with a drag-and-drop canvas to help you explore and organise ideas. Once you've gathered your words, switch to Define mode to add short notes and turn loose associations into a clear concept.",
+			"challenge": "The challenge was twofold: creating an intuitive, lightweight UX that sparks creativity without overwhelming the user, and ensuring full compliance with the European Accessibility Act (2025) while making a visual drag-and-drop workspace.",
+			"results": "The result is a highly polished, interactive app built with dnd-kit, Framer Motion, and Howler.js for an immersive experience. Designed with zero onboarding friction, it is actively used by indie game designers and musicians to kickstart new projects. It stands as proof that highly interactive, modern web experiences can be both deeply creative and fully accessible.",
 			"role": "Solo Developer & Designer",
 			"type": "Graduation Project",
 			"highlights": [
-				"Two-mode workflow: Ideate (drag-and-drop canvas) and Define (structured text)",
-				"Drag-and-drop built with dnd-kit, animations with Framer Motion, audio with Howler.js",
-				"Fully keyboard accessible, following the European Accessibility Act (2025) guidelines",
-				"Projects saved locally via localStorage — no backend, no accounts, instant onboarding"
+				"Tactile, interactive workspace featuring complex drag-and-drop mechanics and optional audio",
+				"Zero-friction onboarding with no accounts required, actively used by a small community of creators",
+				"Full keyboard accessibility engineered to meet the strict European Accessibility Act guidelines"
 			],
 			"tags": ["TypeScript", "Next.js", "dnd-kit", "Framer Motion", "Howler.js", "Tailwind"],
 			"liveUrl": "https://rainstorm-project.vercel.app/",
@@ -91,14 +92,16 @@
 		{
 			"id": "papercut",
 			"title": "Papercut",
-			"description": "Revamped bookshop's WooCommerce store with improved search, filtering and checkout.",
-			"about": "Papercut is an independent bookshop in Stockholm. I was brought in to modernise their existing WordPress/WooCommerce site — overhauling the search experience, adding faceted filtering, and improving the overall design and checkout flow.",
+			"description": "Optimized a 10+ year old legacy WooCommerce store, engineering a fast hybrid React/Algolia search/filtering experience and a streamlined checkout flow.",
+			"about": "Papercut is a well-known independent bookshop in Stockholm. I was tasked with modernizing their decade-old WordPress/WooCommerce platform, refactoring legacy code to boost performance, overhauling the checkout UX, and introducing advanced product discovery tools.",
+			"challenge": "The original store suffered from slow query times, compounded by a basic search function that lacked any filtering capabilities. In a niche catalog like Papercut's, this made it difficult for customers to navigate, filter, and discover new products.",
+			"results": "By refactoring the backend logic and optimizing data retrieval, I significantly cut down page load times. By developing a custom WordPress plugin using instant search and faceted filtering, this hybrid architecture delivers immediate interface feedback, drastically lowering user friction and making product discovery seamless.",
 			"role": "Developer & Designer Intern at Afonso",
 			"type": "Client Work",
 			"highlights": [
-				"Built a custom WordPress plugin with React and GraphQL",
-				"Integrated Algolia for fast, faceted search and filtering",
-				"Improved checkout UX and overall site design"
+				"Optimized & refactored 10+ year old legacy code",
+				"Developed a custom WordPress plugin integrating React and Algolia for a fast hybrid filtering solution",
+				"Transformed product discovery with instant, multi-faceted search and a friction-free checkout UX"
 			],
 			"tags": ["PHP", "WordPress", "React", "WooCommerce", "GraphQL", "Algolia"],
 			"liveUrl": "https://papercutshop.se/",
@@ -115,14 +118,16 @@
 		{
 			"id": "demokrati-uppropet",
 			"title": "Demokrati Uppropet",
-			"description": "Campaign site for a democratic manifesto — built and launched in two days.",
-			"about": "A one-page campaign site for Kristna Fredsrörelsen, gathering signatures and spreading a democratic manifesto ahead of Sweden's 2026 election. Built headless with Next.js, the site prioritises readability and reach — with Web Share API integration so visitors can easily spread the message across platforms.",
-			"role": "Developer, Intern at Afonso",
+			"description": "Campaign site for a democratic manifesto, built and launched in 48 hours.",
+			"about": "Headless one-page campaign site for Kristna Fredsrörelsen, built by me and a designer to amplify a democratic manifesto ahead of Sweden's 2026 election. The platform prioritizes reach, high readability, and effortless social sharing.",
+			"challenge": "The primary challenge was the strict 48-hour deadline. Operating primarily as the developer, I had to rapidly implement a headless Next.js setup while simultaneously making swift, strategic design decisions to ensure an effective layout under intense time constraints.",
+			"results": "The site launched successfully and on time. By turning the tight timeline into an intentional, minimalist design choice, we ensured that the typography and core message took center stage. Integrating the native Web Share API allowed visitors to seamlessly distribute the manifesto across mobile and desktop.",
+			"role": "Developer & Designer Intern at Afonso",
 			"type": "Client Work",
 			"highlights": [
-				"Designed and built in two days to meet a tight campaign deadline",
-				"Web Share API integration to help visitors spread the manifesto",
-				"Clean, readable layout focused on content and message over aesthetics"
+				"Rapid development and deployment under a high-pressure, 48-hour deadline",
+				"Made fast, execution-focused design decisions without sacrificing quality",
+				"Leveraged the native Web Share API to drive organic engagement"
 			],
 			"tags": ["TypeScript", "Next.js", "Headless", "Web Share API", "Framer Motion"],
 			"liveUrl": "https://demokratiuppropet.se/",
@@ -137,14 +142,16 @@
 		{
 			"id": "ligan",
 			"title": "Ligan",
-			"description": "Claude Code experiment - Fullstack league tracker for our hobbygaming group.",
-			"about": "Ligan is a fullstack web app built to track results, standings, and achievements in a private Magic: The Gathering Commander league. The project is intentionally built almost entirely through AI-assisted prompting using Claude Code to explore AI workflows. The result is a real, working product used by real people, and a hands-on understanding of where AI shines and where you still need to think for yourself.",
+			"description": "Fullstack league tracker and leaderboard for tabletop gaming, built through an experimental AI-driven workflow.",
+			"about": "Ligan is a fullstack web app built to track results, standings, and achievements for a competitive hobby gaming group. It simultaneously served as a hands-on experiment in AI-assisted development using Claude Code.",
+			"challenge": "The technical hurdle was implementing secure auth, real-time database schemas in Supabase, and dynamic score calculations. The workflow challenge was managing the AI: while Claude excelled at rapid coding, it required human intuition to steer pure mathematical logic into house rules that are actually fun for real players.",
+			"results": "The app is actively used every week by our gaming group with role-based authority for match reporting. Iterating through the project delivered a robust tool with an engaging achievement system, while providing me with deep expertise in optimizing AI pair-programming workflows for fast, reliable deployment.",
 			"role": "Solo Developer",
 			"type": "Hobby Project",
 			"highlights": [
-				"Built end-to-end with Claude as a coding partner — a deliberate experiment in AI-assisted development",
-				"Fullstack app using Supabase, Next.js App Router and server-side authentication",
-				"Dynamic achievement system — Hot Streak, Underdog, Fallen from Grace and more"
+				"Developed fullstack architecture with dynamic leaderboards, Supabase database, and secure server-side auth",
+				"Designed and implemented a complex, dynamic achievement and point calculation system",
+				"Conducted an in-depth exploration of advanced AI-assisted engineering workflows to drastically cut development time"
 			],
 			"tags": ["Claude", "Supabase", "TypeScript", "Next.js", "Tailwind", "Framer Motion"],
 			"liveUrl": "https://mtg-ligan.vercel.app/",

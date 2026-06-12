@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Howl } from "howler";
 import { useSparkles } from "./Sparkle";
+import Image from "next/image";
 
 // Low C → chromatic scale → High C (13 notes, full octave)
 const NOTES = [
@@ -193,7 +194,7 @@ export default function Piano() {
 								key={note}
 								data-note={note}
 								onPointerDown={(e) => handlePointerDown(note, e)}
-								className={`absolute top-0 pointer-events-auto transition-transform duration-75 cursor-pointer z-10 ${activeNotes.has(note) ? "scale-98" : "scale-100"}`}
+								className={`absolute bg-blend-darken top-0 pointer-events-auto transition-transform duration-75 cursor-pointer z-10 ${activeNotes.has(note) ? "scale-98" : "scale-100"}`}
 								style={{
 									left: `${left}%`,
 									width: `${keyWidth * 0.6}%`,

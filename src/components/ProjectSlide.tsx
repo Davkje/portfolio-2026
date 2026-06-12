@@ -6,6 +6,7 @@ import {
 	RiArrowLeftSFill,
 	RiArrowRightSFill,
 	RiArrowUpSFill,
+	RiCloseLine,
 	RiSubtractLine,
 } from "@remixicon/react";
 import { AnimatePresence, motion, useInView, Variants } from "framer-motion";
@@ -28,6 +29,8 @@ export interface Project {
 	role: string;
 	type: string;
 	about: string;
+	challenge?: string;
+	results?: string;
 	liveUrl?: string;
 	githubUrl?: string;
 	featured?: boolean;
@@ -139,6 +142,40 @@ function MobilePanel({ p, expanded, onToggle }: PanelProps) {
 										</p>
 									</div>
 
+									{p.challenge && (
+										<div className="flex flex-col gap-2">
+											<p
+												className="text-md tracking-widest uppercase font-light"
+												style={{ color: p.accent }}
+											>
+												Challenge
+											</p>
+											<p
+												className="text-base leading-relaxed opacity-90"
+												style={{ color: p.accent }}
+											>
+												{p.challenge}
+											</p>
+										</div>
+									)}
+
+									{p.results && (
+										<div className="flex flex-col gap-2">
+											<p
+												className="text-md tracking-widest uppercase font-light"
+												style={{ color: p.accent }}
+											>
+												Results
+											</p>
+											<p
+												className="text-base leading-relaxed opacity-90"
+												style={{ color: p.accent }}
+											>
+												{p.results}
+											</p>
+										</div>
+									)}
+
 									<div className="flex flex-col gap-2">
 										<p
 											className="text-md tracking-widest uppercase font-light"
@@ -204,7 +241,7 @@ function DesktopPanel({ p, expanded, onToggle }: PanelProps) {
 		<>
 			{/* Main column */}
 			<div
-				className="hidden md:flex relative z-10 w-[35vw] h-[90vh] flex-col justify-between px-4 shrink-0 min-w-90"
+				className="hidden md:flex relative z-10 w-[35vw] h-[90vh] flex-col justify-between px-4 shrink-0 min-w-70"
 				style={{ background: p.bg }}
 			>
 				<div className="flex flex-col gap-6 h-full">
@@ -228,12 +265,12 @@ function DesktopPanel({ p, expanded, onToggle }: PanelProps) {
 							</span>
 						</button>
 
-						<p className="text-lg leading-relaxed" style={{ color: p.accent }}>
+						<p className="text-xl leading-relaxed" style={{ color: p.accent }}>
 							{p.description}
 						</p>
 					</div>
 					<div
-						className="flex flex-col gap-1 text-md font-light tracking-wider opacity-70"
+						className="flex flex-col gap-1 text-lg font-light tracking-wider opacity-70"
 						style={{ color: p.accent }}
 					>
 						<p>{p.type}</p>
@@ -256,7 +293,7 @@ function DesktopPanel({ p, expanded, onToggle }: PanelProps) {
 					</div>
 					<button
 						onClick={onToggle}
-						className="flex gap-2 max-w-min text-md justify-start items-center text-center tracking-widest hover:underline hover:opacity-80 transition-opacity"
+						className="flex gap-2 max-w-min text-lg justify-start items-center text-center tracking-widest hover:underline hover:opacity-80 transition-opacity"
 						style={{ color: p.accent, borderColor: `${p.accent}60` }}
 						aria-expanded={expanded}
 					>
@@ -312,24 +349,48 @@ function DesktopPanel({ p, expanded, onToggle }: PanelProps) {
 						className="hidden md:block relative z-10 shrink-0 h-[90vh] overflow-hidden "
 						style={{ background: `${p.bg}` }}
 					>
-						<div className="w-[calc(45dvw-3rem)] py-4 pl-2 pr-6 flex flex-col gap-6">
-							<div className="flex flex-col gap-3">
-								<h4
-									className="text-md tracking-widest uppercase opacity-70"
-									style={{ color: p.accent }}
+						<div className="w-[calc(100dvw-35vw-8rem)] py-4 pl-2 pr-6 flex flex-col gap-6 sm:text-[clamp(14px,1.4vw,16px)] xl:text-[clamp(16px,0.95vw,18px)]">
+							<div className="relative flex flex-col gap-3">
+								<button
+									onClick={onToggle}
+									className="absolute right-0 hover:opacity-80 transition-opacity z-20"
+									style={{ color: p.accent, borderColor: `${p.accent}60` }}
+									aria-expanded={expanded}
 								>
+									<RiCloseLine />
+								</button>
+								<h4 className="tracking-widest uppercase opacity-70" style={{ color: p.accent }}>
 									About
 								</h4>
-								<p className="text-md leading-relaxed opacity-90" style={{ color: p.accent }}>
+								<p className="leading-relaxed opacity-90" style={{ color: p.accent }}>
 									{p.about}
 								</p>
 							</div>
 
+							{p.challenge && (
+								<div className="flex flex-col gap-3">
+									<h4 className="tracking-widest uppercase opacity-70" style={{ color: p.accent }}>
+										Challenge
+									</h4>
+									<p className="leading-relaxed opacity-90" style={{ color: p.accent }}>
+										{p.challenge}
+									</p>
+								</div>
+							)}
+
+							{p.results && (
+								<div className="flex flex-col gap-3">
+									<h4 className="tracking-widest uppercase opacity-70" style={{ color: p.accent }}>
+										Results
+									</h4>
+									<p className="leading-relaxed opacity-90" style={{ color: p.accent }}>
+										{p.results}
+									</p>
+								</div>
+							)}
+
 							<div className="flex flex-col gap-3">
-								<p
-									className="text-md tracking-widest uppercase opacity-70"
-									style={{ color: p.accent }}
-								>
+								<p className="tracking-widest uppercase opacity-70" style={{ color: p.accent }}>
 									Highlights
 								</p>
 								<ul className="flex flex-col gap-4">
@@ -337,11 +398,11 @@ function DesktopPanel({ p, expanded, onToggle }: PanelProps) {
 										<li
 											key={h}
 											style={{ color: p.accent }}
-											className="text-md leading-relaxed opacity-90 flex gap-4"
+											className="leading-relaxed opacity-90 flex gap-4"
 										>
 											<span
 												style={{ backgroundColor: p.accent }}
-												className="place-self-start mt-2.5 rounded-full h-2 w-2 shrink-0"
+												className="place-self-start mt-3 rounded-full h-2 w-2 shrink-0"
 											></span>
 											{h}
 										</li>
@@ -445,8 +506,7 @@ const ProjectSlide = forwardRef<HTMLDivElement, ProjectSlideProps>(
 							priority={i === 0}
 						/>
 					)}
-					{/* 
-					
+
 					{/* OVERLAY */}
 					<div
 						className={`absolute inset-0 bg-black/60 z-10 transition-opacity duration-400 ease-in-out ${!expanded && "opacity-0"}`}

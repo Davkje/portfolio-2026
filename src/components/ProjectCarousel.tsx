@@ -66,7 +66,7 @@ export default function ProjectCarousel() {
 				Projects
 			</h2>
 			<div className="relative w-full flex flex-col-reverse md:gap-0 md:flex-row-reverse">
-				<main className="flex-1 min-w-0 flex flex-col gap-0 md:gap-16">
+				<main className="flex-1 min-w-0 flex flex-col gap-0 md:gap-24">
 					{PROJECTS.map((p, i) => (
 						<ProjectSlide
 							key={p.id}
