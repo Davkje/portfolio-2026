@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
+import { Howl } from "howler";
 import { motion } from "framer-motion";
 import { useSparkles } from "./Sparkle";
+import { useButtonSound } from "./useButtonSound";
 
 const LINES = [
 	[0, 1, 2],
@@ -72,6 +74,21 @@ export default function TicTacToe() {
 
 	const gridRef = useRef<HTMLDivElement>(null);
 	const { burst, SparkleLayer } = useSparkles(gridRef);
+	const playClick = useButtonSound();
+	const resultSounds = useRef<{ win: Howl | null; loose: Howl | null }>({ win: null, loose: null });
+
+	useEffect(() => {
+		resultSounds.current.win = new Howl({
+			src: ["/assets/sounds/win.wav"],
+			preload: true,
+			volume: 0.5,
+		});
+		resultSounds.current.loose = new Howl({
+			src: ["/assets/sounds/draw_loose.wav"],
+			preload: true,
+			volume: 0.2,
+		});
+	}, []);
 
 	const winner = getWinner(board);
 	const isDraw = !winner && board.every(Boolean);
@@ -98,6 +115,7 @@ export default function TicTacToe() {
 				n[move] = Math.random() * 22 - 11;
 				return n;
 			});
+			playClick(0.6);
 			setPlayerTurn(true);
 		}, 350);
 		return () => clearTimeout(id);
@@ -106,6 +124,11 @@ export default function TicTacToe() {
 	// Game over — bounce winners → fade all out → reset
 	useEffect(() => {
 		if (!done) return;
+		if (winner === "X") {
+			resultSounds.current.win?.play();
+		} else {
+			resultSounds.current.loose?.play();
+		}
 		const bounceId = setTimeout(() => setBouncing(true), 100);
 		const exitId = setTimeout(() => setExiting(true), 700);
 		const resetId = setTimeout(() => {
@@ -127,6 +150,7 @@ export default function TicTacToe() {
 	const handleClick = (i: number, e: React.MouseEvent) => {
 		if (!playerTurn || board[i] || done) return;
 		burst(e);
+		playClick();
 		setBoard((prev) => {
 			const n = [...prev];
 			n[i] = "X";

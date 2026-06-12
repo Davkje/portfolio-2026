@@ -11,7 +11,7 @@ const SPARKLES = [
 	"/assets/sparkle4.png",
 ];
 
-const SIZE = 28;
+const SIZE = 18;
 const DURATION = 0.6;
 const POP_END = 0.25; // fraction of DURATION spent popping in
 
@@ -25,6 +25,8 @@ interface SparklePoint {
 	y: number;
 	src: string;
 	rotate: number;
+	rotateDelta: number;
+	size: number;
 	dx: number;
 	arc: number;
 }
@@ -63,12 +65,13 @@ function SparkleParticle({ s }: { s: SparklePoint }) {
 	return (
 		<motion.div
 			initial={{ opacity: 1, scale: 0, rotate: s.rotate }}
-			animate={{ opacity: [1, 1, 0], scale: [0, 1.4, 1] }}
+			animate={{ opacity: [1, 1, 0], scale: [0, 1.4, 1], rotate: s.rotate + s.rotateDelta }}
 			transition={{
 				duration: DURATION,
 				times: [0, POP_END, 1],
 				scale: { duration: DURATION, times: [0, POP_END, 1], ease: ["circOut", "easeOut"] },
 				opacity: { duration: DURATION, times: [0, POP_END, 1], ease: ["linear", "easeIn"] },
+				rotate: { duration: DURATION, ease: "easeOut" },
 			}}
 			className="absolute"
 			style={{
@@ -76,13 +79,20 @@ function SparkleParticle({ s }: { s: SparklePoint }) {
 				y,
 				left: s.x,
 				top: s.y,
-				width: SIZE,
-				height: SIZE,
-				marginLeft: -SIZE / 2,
-				marginTop: -SIZE / 2,
+				width: s.size,
+				height: s.size,
+				marginLeft: -s.size / 2,
+				marginTop: -s.size / 2,
 			}}
 		>
-			<Image src={s.src} fill className="object-contain" alt="" />
+			<Image
+				src={s.src}
+				fill
+				sizes={`${Math.ceil(s.size)}px`}
+				// className="object-contain  drop-shadow-[1px_3px_2px] drop-shadow-black"
+				className="object-contain "
+				alt=""
+			/>
 		</motion.div>
 	);
 }
@@ -127,6 +137,8 @@ export function useSparkles(containerRef: RefObject<HTMLElement | null>) {
 					y: el.offsetHeight / 2 + localDy + spawnOffsetY,
 					src: pick(SPARKLES),
 					rotate: Math.random() * 60 - 30,
+					rotateDelta: (Math.random() < 0.5 ? -1 : 1) * (90 + Math.random() * 90),
+					size: SIZE * (0.8 + Math.random() * 0.4),
 					dx: direction * (20 + Math.random() * 25),
 					arc: 12 + Math.random() * 14,
 				},

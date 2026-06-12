@@ -71,7 +71,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={`${geistSans.variable} ${geistMono.variable} ${jomolhari.variable} ${lora.variable} ${lato.variable} ${poppins.variable} ${openSans.variable} ${outfit.variable} h-full antialiased bg-red overflow-x-hidden`}
+			className={`${geistSans.variable} ${geistMono.variable} ${jomolhari.variable} ${lora.variable} ${lato.variable} ${poppins.variable} ${openSans.variable} ${outfit.variable} h-full antialiased bg-background overflow-x-hidden`}
 		>
 			<body className="min-h-full flex w-full flex-col font-poppins scroll-x-hidden">
 				<Navbar />
