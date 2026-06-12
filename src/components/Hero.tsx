@@ -1,4 +1,5 @@
 import Image from "next/image";
+import TicTacToe from "./TicTacToe";
 export default function Hero() {
 	return (
 		<section className="relative bg-red-texture">
@@ -12,7 +13,7 @@ export default function Hero() {
 				}}
 			/>
 
-			<div className="z-2 flex flex-col justify-between items-center relative w-full min-h-screen">
+			<div className="relative z-2 flex flex-col justify-between items-center w-full min-h-screen">
 				<div className="absolute right-6 top-20 flex items-center gap-4 text-foreground z-100">
 					<a
 						href="https://www.linkedin.com/in/david-kjellstrand-b6760113a/"

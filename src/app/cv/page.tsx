@@ -75,14 +75,14 @@ export default function CVPage() {
 	return (
 		<main className="bg-background min-h-screen text-foreground">
 			<div className="max-w-3xl mx-auto px-6 py-24">
-				<div className="flex items-end justify-between mb-16">
+				<div className="flex flex-col gap-6">
 					<h1 className="font-jomolhari text-[clamp(60px,12vw,120px)] leading-none uppercase">
 						CV
 					</h1>
 					<a
 						href="/assets/CV2026.pdf"
 						download
-						className="text-md tracking-widest uppercase px-4 py-2 border border-foreground/40 text-foreground hover:opacity-60 transition-opacity mb-3"
+						className="text-md tracking-widest uppercase px-4 py-2 border border-foreground/40 text-center text-foreground hover:opacity-60 transition-opacity"
 					>
 						Download PDF
 					</a>
@@ -90,7 +90,7 @@ export default function CVPage() {
 
 				<div className="flex flex-col">
 					{/* Work */}
-					<section className="border-t border-foreground/20 py-10">
+					<section className="py-8">
 						<span className="text-lg tracking-widest uppercase text-foreground/50 block mb-8">
 							Work
 						</span>
