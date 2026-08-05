@@ -319,7 +319,7 @@ function DesktopPanel({ p, expanded, onToggle }: PanelProps) {
 								className="text-center tracking-widest uppercase px-4 py-4 border hover:opacity-80 transition-opacity text-xl"
 								style={{ color: p.bg, backgroundColor: `${p.accent}` }}
 							>
-								Live
+								Live Site
 							</a>
 						)}
 						{p.githubUrl && (
@@ -349,7 +349,7 @@ function DesktopPanel({ p, expanded, onToggle }: PanelProps) {
 						className="hidden md:block relative z-10 shrink-0 h-[90vh] overflow-hidden "
 						style={{ background: `${p.bg}` }}
 					>
-						<div className="w-[calc(100dvw-35vw-8rem)] py-4 pl-2 pr-6 flex flex-col gap-6 sm:text-[clamp(14px,1.4vw,16px)] xl:text-[clamp(16px,0.95vw,18px)]">
+						<div className="w-[calc(100dvw-35vw-10rem)] py-4 pl-2 pr-6 flex flex-col gap-6 sm:text-[clamp(14px,1.4vw,16px)] xl:text-[clamp(16px,0.95vw,18px)]">
 							<div className="relative flex flex-col gap-3">
 								<button
 									onClick={onToggle}
@@ -509,7 +509,7 @@ const ProjectSlide = forwardRef<HTMLDivElement, ProjectSlideProps>(
 
 					{/* OVERLAY */}
 					<div
-						className={`absolute inset-0 bg-black/60 z-10 transition-opacity duration-400 ease-in-out ${!expanded && "opacity-0"}`}
+						className={`absolute inset-0 bg-black/40 z-10 transition-opacity duration-400 ease-in-out hover:opacity-100 ${!expanded && "opacity-0"}`}
 					></div>
 				</button>
 			</section>
