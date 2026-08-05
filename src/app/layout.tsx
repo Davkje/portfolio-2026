@@ -61,6 +61,9 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
 	title: "Portfolio - David Kjellstrand",
 	description: "David Kjellstrands Portfolio 2026",
+	appleWebApp: {
+		title: "Portfolio",
+	},
 };
 
 export default function RootLayout({

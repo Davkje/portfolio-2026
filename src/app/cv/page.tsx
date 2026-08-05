@@ -1,3 +1,6 @@
+import { RiFileDownloadLine } from "@remixicon/react";
+import Link from "next/link";
+
 export default function CVPage() {
 	const work = [
 		{
@@ -74,43 +77,44 @@ export default function CVPage() {
 
 	return (
 		<main className="bg-background min-h-screen text-foreground">
-			<div className="max-w-3xl mx-auto px-6 py-24">
-				<div className="flex flex-col gap-6">
-					<h1 className="font-jomolhari text-[clamp(60px,12vw,120px)] leading-none uppercase">
+			<div className="p-6">
+				<div className="flex items-end gap-2 py-10">
+					<h1 className="font-jomolhari leading-none text-[clamp(50px,12vw,80px)] tracking-wide uppercase">
 						CV
 					</h1>
 					<a
 						href="/assets/CV2026.pdf"
 						download
-						className="text-md tracking-widest uppercase px-4 py-2 border border-foreground/40 text-center text-foreground hover:opacity-60 transition-opacity"
+						className="flex items-end text-foreground opacity-60 hover:opacity-100 transition-opacity w-fit"
+						aria-label="Download CV as CV"
 					>
-						Download PDF
+						<RiFileDownloadLine size={24} className="mb-0.5" />
 					</a>
 				</div>
 
 				<div className="flex flex-col">
 					{/* Work */}
-					<section className="py-8">
-						<span className="text-lg tracking-widest uppercase text-foreground/50 block mb-8">
+					<section className="border-t border-foreground/10 py-10">
+						<span className="text-lg tracking-widest uppercase text-foreground/80 block mb-4">
 							Work
 						</span>
-						<div className="flex flex-col gap-10">
+						<div className="flex flex-col gap-10 max-w-[70vw]">
 							{work.map((job) => (
 								<div key={job.role}>
 									<div className="flex flex-wrap justify-between items-baseline gap-2 mb-1">
 										<h3 className="font-semibold text-lg">{job.role}</h3>
-										<span className="font-mono text-sm text-foreground/50 shrink-0">
+										<span className="font-mono text-md text-foreground/80 shrink-0">
 											{job.period}
 										</span>
 									</div>
-									<p className="text-[11px] tracking-widest uppercase text-foreground/50 mb-3">
+									<p className="text-sm tracking-widest uppercase text-foreground/80 mb-3">
 										{job.company}
 									</p>
-									<p className="leading-relaxed mb-3">{job.description}</p>
+									<p className="text-lg leading-relaxed mb-3">{job.description}</p>
 									{job.bullets.length > 0 && (
-										<ul className="flex flex-col gap-1 text-sm text-foreground/70">
+										<ul className="list-disc list-inside flex flex-col gap-1 text-lg text-foreground">
 											{job.bullets.map((b) => (
-												<li key={b}>— {b}</li>
+												<li key={b}>{b}</li>
 											))}
 										</ul>
 									)}
@@ -120,44 +124,44 @@ export default function CVPage() {
 					</section>
 
 					{/* Education */}
-					<section className="border-t border-foreground/20 py-10">
-						<span className="text-lg tracking-widest uppercase text-foreground/50 block mb-8">
+					<section className="border-t border-foreground/10 py-10">
+						<span className="text-lg tracking-widest uppercase text-foreground/80 block mb-4">
 							Education
 						</span>
-						<div className="flex flex-col gap-8">
+						<div className="flex flex-col gap-8 max-w-[70vw]">
 							{education.map((edu) => (
 								<div key={edu.degree}>
 									<div className="flex flex-wrap justify-between items-baseline gap-2 mb-1">
 										<h3 className="font-semibold text-lg">{edu.degree}</h3>
-										<span className="font-mono text-sm text-foreground/50 shrink-0">
+										<span className="font-mono text-md text-foreground/80 shrink-0">
 											{edu.period}
 										</span>
 									</div>
-									<p className="text-[11px] tracking-widest uppercase text-foreground/50 mb-3">
+									<p className="text-md tracking-widest uppercase text-foreground/80 mb-3">
 										{edu.school}
 									</p>
-									<p className="text-sm leading-relaxed">{edu.description}</p>
+									<p className="text-lg leading-relaxed">{edu.description}</p>
 								</div>
 							))}
 						</div>
 					</section>
 
 					{/* Skills */}
-					<section className="border-t border-foreground/20 py-10">
-						<span className="text-lg tracking-widest uppercase text-foreground/50 block mb-8">
+					<section className="border-t border-foreground/10 py-10">
+						<span className="text-lg tracking-widest uppercase text-foreground/80 block mb-4">
 							Skills
 						</span>
-						<div className="flex flex-col gap-6">
+						<div className="flex flex-col gap-6 max-w-[70vw]">
 							{skills.map(({ label, items }) => (
 								<div key={label}>
-									<p className="text-[11px] tracking-widest uppercase font-mono text-foreground/40 mb-3">
+									<p className="text-md tracking-widest uppercase font-mono text-foreground/80 mb-3">
 										{label}
 									</p>
 									<div className="flex flex-wrap gap-2">
 										{items.map((item) => (
 											<span
 												key={item}
-												className="text-[11px] tracking-widest uppercase px-3 py-1.5 border border-foreground/25 bg-foreground/5 text-foreground"
+												className="text-sm tracking-widest uppercase px-3 py-1.5 border border-foreground/40 bg-foreground/5 text-foreground"
 											>
 												{item}
 											</span>
@@ -167,6 +171,22 @@ export default function CVPage() {
 							))}
 						</div>
 					</section>
+					<a
+						href="/assets/CV2026.pdf"
+						download
+						className="max-w-5xl mx-auto w-full mb-6 flex justify-center gap-2 text-xl text-center tracking-widest uppercase px-3 py-4 bg-foreground/5 text-foreground border border-transparent hover:border-foreground transition-colors"
+						aria-label="Download CV as CV"
+					>
+						Download the full CV
+						<RiFileDownloadLine size={24} className="mb-0.5" />
+					</a>
+
+					<Link
+						href={"/"}
+						className="max-w-5xl mx-auto w-full text-xl text-center tracking-widest uppercase px-3 py-4 text-foreground border border-transparent transition-colors hover:border-foreground"
+					>
+						Back to the portfolio
+					</Link>
 				</div>
 			</div>
 		</main>

@@ -1,16 +1,16 @@
 import Image from "next/image";
-import TicTacToe from "./TicTacToe";
+
 export default function Hero() {
 	return (
 		<section className="relative bg-red-texture">
-			<div
-				className="absolute inset-0"
-				style={{
-					backgroundImage: "url('/assets/texture1.jpg')",
-					backgroundSize: "cover",
-					backgroundPosition: "center",
-					mixBlendMode: "multiply",
-				}}
+			<Image
+				src="/assets/texture1.jpg"
+				alt=""
+				fill
+				priority
+				sizes="100vw"
+				className="object-cover relative"
+				style={{ mixBlendMode: "multiply" }}
 			/>
 
 			<div className="relative z-2 flex flex-col justify-between items-center w-full min-h-screen">
@@ -55,7 +55,7 @@ export default function Hero() {
 				</div>
 
 				<div className="px-6 py-2 place-self-start mt-16 md:mt-0">
-					<div className="font-jomolhari uppercase leading-[clamp(80px,17vw,160px)] text-[clamp(80px,18vw,180px)]">
+					<div className="font-jomolhari uppercase leading-[clamp(80px,17vw,160px)] text-[clamp(80px,18vw,180px)] tracking-wide">
 						<p>ITS</p>
 						<p>DOWN</p>
 						<p>THERE</p>
@@ -69,10 +69,6 @@ export default function Hero() {
 						<p>Front End Developer</p>
 						<p>IN STHLM</p>
 					</div>
-				</div>
-
-				<div className="max-w-min max-h-min z-90 absolute rotate-10 right-4 top-1/2 -translate-y-1/2 md:right-16 md:p-6 scale-75 md:scale-100 md:hover:scale-110 transition-all duration-300 ease-out">
-					<TicTacToe />
 				</div>
 			</div>
 		</section>

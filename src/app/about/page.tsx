@@ -6,38 +6,39 @@ const { about } = portfolioData.personal;
 export default function AboutPage() {
 	return (
 		<main className="bg-background min-h-screen text-foreground">
-			<div className="max-w-3xl mx-auto px-6 py-24">
-				<h1 className="font-jomolhari text-[clamp(60px,12vw,120px)] leading-none mb-16 uppercase">
+			<div className="p-6">
+				{/* <h1 className="font-jomolhari  leading-none mb-16 uppercase"> */}
+				<h1 className="font-jomolhari leading-none text-[clamp(50px,12vw,80px)] tracking-wide uppercase py-10">
 					About me
 				</h1>
 
 				<div className="flex flex-col">
-					<section className="border-t border-foreground/20 py-10">
+					<section className="border-t border-foreground/10 py-10">
 						<span className="text-lg tracking-widest uppercase text-foreground/50 block mb-4">
 							Who?
 						</span>
-						<p className="text-lg leading-relaxed">{about.who}</p>
+						<p className="text-lg leading-relaxed max-w-3xl">{about.who}</p>
 					</section>
 
-					<section className="border-t border-foreground/20 py-10">
+					<section className="border-t border-foreground/10 py-10">
 						<span className="text-lg tracking-widest uppercase text-foreground/50 block mb-4">
 							What?
 						</span>
-						<p className="text-lg leading-relaxed">{about.what}</p>
+						<p className="text-lg leading-relaxed max-w-3xl">{about.what}</p>
 					</section>
 
-					<section className="border-t border-foreground/20 py-10">
+					<section className="border-t border-foreground/10 py-10">
 						<span className="text-lg tracking-widest uppercase text-foreground/50 block mb-4">
 							Where?
 						</span>
-						<p className="text-lg leading-relaxed">{about.where}</p>
+						<p className="text-lg leading-relaxed max-w-3xl">{about.where}</p>
 					</section>
 
-					<section className="border-t border-foreground/20 py-10">
+					<section className="border-t border-foreground/10 py-10">
 						<span className="text-lg tracking-widest uppercase text-foreground/50 block mb-4">
 							Why...
 						</span>
-						<p className="text-lg leading-relaxed">
+						<p className="text-lg leading-relaxed max-w-3xl">
 							... don&apos;t you check out some of my work in my{" "}
 							<Link
 								href="/"
@@ -50,10 +51,7 @@ export default function AboutPage() {
 						</p>
 					</section>
 
-					<section className="border-t border-foreground/20 py-10">
-						<span className="text-lg tracking-widest uppercase text-foreground/50 block mb-6">
-							Music
-						</span>
+					<section className="mx-auto max-w-3xl w-full">
 						<iframe
 							src="https://open.spotify.com/embed/playlist/36iVvde48wbmv5WinHK1Y6?utm_source=generator&theme=0"
 							width="100%"
@@ -63,6 +61,13 @@ export default function AboutPage() {
 							style={{ borderRadius: "12px", border: "none" }}
 						/>
 					</section>
+
+					<Link
+						href={"/"}
+						className="max-w-5xl mx-auto w-full mt-6 text-xl text-center tracking-widest uppercase px-3 py-4 text-foreground border border-transparent transition-colors hover:border-foreground"
+					>
+						Back to the portfolio
+					</Link>
 				</div>
 			</div>
 		</main>

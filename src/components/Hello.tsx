@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import Piano from "./Piano";
+import TicTacToe from "./TicTacToe";
 
 const profilePhoto = "/assets/davidright.png";
 
@@ -24,10 +25,10 @@ export default function Hello() {
 	const inView = useInView(imageRef, { amount: 0.6, once: true });
 
 	return (
-		<section className="min-h-[60vh] my-60 mb-10 md:my-30 md:mb-40 xl:my-20 relative">
+		<section className="min-h-[60vh] my-60 mb-10 md:my-30 md:mb-0 xl:my-20 relative">
 			<div className="relative w-full h-full place-content-center max-w-350 mx-auto place-items-center flex flex-col md:flex-row gap-6 md:justify-between p-4 md:p-12">
 				<div className="white-space z-300 text-[clamp(20px,6vw,44px)] md:max-w-[50vw] relative flex flex-col gap-2 md:gap-4 items-start justify-center">
-					<h3 className="uppercase text-[clamp(36px,3vw,44px)]">Get to know me</h3>
+					<h3 className="uppercase text-[clamp(36px,3vw,44px)] font-medium">Get to know me</h3>
 					<div className="flex flex-col gap-6 font-normal max-w-175 text-[clamp(18px,2.6vw,24px)] leading-[clamp(32px,5vw,36px)]">
 						<p>
 							Hi! I&apos;m David,{" "}
@@ -51,8 +52,13 @@ export default function Hello() {
 						</p>
 						<p>Love games, art, music, sauerkraut and everything nerdy!</p>
 					</div>
-					<div className="mt-4 md:mt-8 self-center scale-90 md:scale-100">
-						<Piano />
+					<div className="w-[calc(100vw-32px)] md:w-full flex justify-center md:justify-between sm:mt-10">
+						<div className="w-min mt-4 md:mt-8 -rotate-10 scale-80 md:scale-100">
+							<Piano />
+						</div>
+						<div className="max-w-min max-h-min z-90 rotate-10 scale-75 md:scale-100 md:hover:scale-110 transition-all duration-300 ease-out">
+							<TicTacToe />
+						</div>
 					</div>
 				</div>
 				<motion.div
