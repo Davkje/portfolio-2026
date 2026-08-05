@@ -1,13 +1,15 @@
 import Image from "next/image";
+import texture1 from "@/assets/texture1.jpg";
 
 export default function Hero() {
 	return (
 		<section className="relative bg-red-texture">
 			<Image
-				src="/assets/texture1.jpg"
+				src={texture1}
 				alt=""
 				fill
 				priority
+				placeholder="blur"
 				sizes="100vw"
 				className="object-cover relative"
 				style={{ mixBlendMode: "multiply" }}

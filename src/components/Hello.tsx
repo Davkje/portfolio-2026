@@ -5,8 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import Piano from "./Piano";
 import TicTacToe from "./TicTacToe";
-
-const profilePhoto = "/assets/davidright.png";
+import profilePhoto from "@/assets/davidright.png";
 
 export default function Hello() {
 	const imageRef = useRef<HTMLDivElement>(null);
