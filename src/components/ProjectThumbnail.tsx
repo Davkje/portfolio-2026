@@ -20,7 +20,7 @@ export default function ProjectThumbnail({
 			onClick={onClick}
 			className={`
         cursor-pointer place-self-end relative flex-none overflow-hidden transition-all duration-500 ease-in-out group
-        h-13 min-w-max
+        h-13 min-w-max hover:opacity-100
         
         ${active ? "opacity-100" : " opacity-50"}  
         md:w-full md:min-h-2 md:min-w-2
@@ -31,9 +31,7 @@ export default function ProjectThumbnail({
 				<span className="text-xs font-mono uppercase" style={{ color: p.accent }}>
 					{String(i + 1).padStart(2, "0")}
 				</span>
-				<span className="text-xs md:text-sm font-medium md:block" style={{ color: p.accent }}>
-					{p.title}
-				</span>
+				<span className="text-xs md:text-sm font-medium md:block text-foreground">{p.title}</span>
 			</div>
 		</button>
 	);

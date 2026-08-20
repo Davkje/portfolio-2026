@@ -36,6 +36,10 @@ export interface Project {
 	featured?: boolean;
 }
 
+function formatUrl(url: string) {
+	return url.replace(/^https?:\/\//, "").replace(/\/$/, "");
+}
+
 // ─────────────────────────────────────────────
 // Shared types
 // ─────────────────────────────────────────────
@@ -211,7 +215,8 @@ function MobilePanel({ p, expanded, onToggle }: PanelProps) {
 							className="text-center tracking-widest uppercase px-4 py-3 hover:opacity-80 transition-opacity"
 							style={{ color: p.bg, backgroundColor: p.accent }}
 						>
-							Live
+							View Project
+							<p className="pt-1 text-xs opacity-70">{formatUrl(p.liveUrl)}</p>
 						</a>
 					)}
 					{p.githubUrl && (
@@ -247,7 +252,7 @@ function DesktopPanel({ p, expanded, onToggle }: PanelProps) {
 				<div className="flex flex-col gap-6 h-full">
 					<div className="flex flex-col gap-1">
 						<button
-							className="flex w-full gap-1 justify-between items-center mb-4"
+							className="flex w-full gap-1 justify-between items-center mb-4 group"
 							onClick={onToggle}
 							aria-expanded={expanded}
 						>
@@ -258,7 +263,7 @@ function DesktopPanel({ p, expanded, onToggle }: PanelProps) {
 								{p.title}
 							</h2>
 							<span
-								className={`p-3 pr-0  transition-opacity duration-300 `}
+								className={`p-3 pr-0  transition-all duration-300 group-hover:scale-120`}
 								style={{ color: p.accent }}
 							>
 								{!expanded ? <RiArrowRightSFill size={32} /> : <RiArrowLeftSFill size={32} />}
@@ -281,11 +286,7 @@ function DesktopPanel({ p, expanded, onToggle }: PanelProps) {
 						{p.tags.map((t) => (
 							<span
 								key={t}
-								className="text-sm tracking-widest uppercase text-center grow px-4 py-2 select-none"
-								style={{
-									color: p.accent,
-									backgroundColor: `${p.accent}20`,
-								}}
+								className="text-sm tracking-widest uppercase text-center grow px-4 py-2 select-none transition-all hover:scale-103 bg-foreground/10 hover:bg-foreground/15"
 							>
 								{t}
 							</span>
@@ -293,7 +294,7 @@ function DesktopPanel({ p, expanded, onToggle }: PanelProps) {
 					</div>
 					<button
 						onClick={onToggle}
-						className="flex gap-2 max-w-min text-lg justify-start items-center text-center tracking-widest hover:underline hover:opacity-80 transition-opacity"
+						className="flex gap-2 max-w-min text-lg justify-start items-center text-center tracking-widest hover:underline underline-offset-4 hover:opacity-80 transition-opacity"
 						style={{ color: p.accent, borderColor: `${p.accent}60` }}
 						aria-expanded={expanded}
 					>
@@ -319,7 +320,8 @@ function DesktopPanel({ p, expanded, onToggle }: PanelProps) {
 								className="text-center tracking-widest uppercase px-4 py-4 border hover:opacity-80 transition-opacity text-xl"
 								style={{ color: p.bg, backgroundColor: `${p.accent}` }}
 							>
-								Live Site
+								View Project
+								<p className="pt-1 text-xs opacity-70">{formatUrl(p.liveUrl)}</p>
 							</a>
 						)}
 						{p.githubUrl && (

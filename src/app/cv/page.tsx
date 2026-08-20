@@ -77,7 +77,7 @@ export default function CVPage() {
 
 	return (
 		<main className="bg-background min-h-screen text-foreground">
-			<div className="p-6">
+			<div className="p-6 max-w-4xl place-self-center">
 				<div className="flex items-end gap-2 py-10">
 					<h1 className="font-jomolhari leading-none text-[clamp(50px,12vw,80px)] tracking-wide uppercase">
 						CV

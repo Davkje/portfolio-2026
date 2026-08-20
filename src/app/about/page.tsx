@@ -6,8 +6,7 @@ const { about } = portfolioData.personal;
 export default function AboutPage() {
 	return (
 		<main className="bg-background min-h-screen text-foreground">
-			<div className="p-6">
-				{/* <h1 className="font-jomolhari  leading-none mb-16 uppercase"> */}
+			<div className="p-6 max-w-4xl place-self-center">
 				<h1 className="font-jomolhari leading-none text-[clamp(50px,12vw,80px)] tracking-wide uppercase py-10">
 					About me
 				</h1>

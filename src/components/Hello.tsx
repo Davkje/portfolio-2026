@@ -50,6 +50,9 @@ export default function Hello() {
 							commercials and tv.
 						</p>
 						<p>Love games, art, music, sauerkraut and everything nerdy!</p>
+						<p className="text-[clamp(14px,2.6vw,18px)] opacity-20 text-center md:text-left">
+							Turn on your audio and explore!
+						</p>
 					</div>
 					<div className="w-[calc(100vw-32px)] md:w-full flex justify-center md:justify-between sm:mt-10">
 						<div className="w-min mt-4 md:mt-8 -rotate-10 scale-80 md:scale-100">
