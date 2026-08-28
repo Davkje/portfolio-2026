@@ -72,7 +72,7 @@ export default function Hello() {
 					<Image
 						src={profilePhoto}
 						alt="David Kjellstrand"
-						className="w-full h-full max-h-80 md:max-h-200 object-contain md:object-cover"
+						className="w-full h-full max-h-80 md:max-h-200 object-contain md:object-cover md:hover:scale-102 transition-transform duration-300 ease-out"
 						priority
 						width={544}
 						height={776}

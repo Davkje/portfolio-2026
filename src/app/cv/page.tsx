@@ -83,7 +83,7 @@ export default function CVPage() {
 						CV
 					</h1>
 					<a
-						href="/assets/CV2026.pdf"
+						href="/assets/David_Kjellstrand_CV.pdf"
 						download
 						className="flex items-end text-foreground opacity-60 hover:opacity-100 transition-opacity w-fit"
 						aria-label="Download CV as CV"
@@ -172,7 +172,7 @@ export default function CVPage() {
 						</div>
 					</section>
 					<a
-						href="/assets/CV2026.pdf"
+						href="/assets/David_Kjellstrand_CV.pdf"
 						download
 						className="max-w-5xl mx-auto w-full mb-6 flex justify-center gap-2 text-xl text-center tracking-widest uppercase px-3 py-4 bg-foreground/5 text-foreground border border-transparent hover:border-foreground transition-colors"
 						aria-label="Download CV as CV"
