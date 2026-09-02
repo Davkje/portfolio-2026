@@ -59,6 +59,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
+	metadataBase: new URL("https://www.davidkjellstrand.com"),
 	title: "Portfolio - David Kjellstrand",
 	description: "David Kjellstrands Portfolio 2026",
 	appleWebApp: {
