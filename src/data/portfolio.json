@@ -64,6 +64,43 @@
 	},
 	"projects": [
 		{
+			"id": "elsvea",
+			"title": "Elektriska Svea ",
+			"description": "Built a specialty lighting retailer's e-commerce platform from the ground up, blending editorial merchandising with data-driven discovery.",
+			"about": "Elektriska Svea is a lighting shop on Hornsgatan in Stockholm with a catalog of hundreds of technically detailed products. I built their entire online store from scratch as their first developer on the project.",
+			"challenge": "Lighting is a category customers navigate by material, finish, wattage, and energy class as much as by name. The shop needed both a discovery experience that could handle that depth, and a way for the owners themselves to promote favorites without touching code.",
+			"results": "A fast, headless storefront with instant Algolia-powered filtering, a custom cross-domain checkout flow, and automated EU EPREL energy label data pulled live per product. The architecture cleanly separates concerns while keeping the editorial and commerce experience tightly integrated.",
+
+			"role": "Front End Developer at Afonso",
+			"type": "Client Work",
+			"highlights": [
+				"Fully headless Next.js storefront consuming WordPress/WooCommerce via WPGraphQL.",
+				"Custom search and faceted filtering for a large technical catalog.",
+				"Automated EU EPREL energy label integration with energy ratings"
+			],
+			"tags": [
+				"Next.js",
+				"TypeScript",
+				"React",
+				"WordPress",
+				"Algolia",
+				"WooCommerce",
+				"GraphQL",
+				"ACF",
+				"Tailwind"
+			],
+			"liveUrl": "https://elsvea.se/",
+			"githubUrl": "",
+			"featured": true,
+			"img": "/assets/elsvea/elsvea3.png",
+			"videoUrl": "",
+			"altImg": "",
+			"altVideoUrl": "",
+			"year": "2025-2026",
+			"bg": "#18191c",
+			"accent": "#dcf3de"
+		},
+		{
 			"id": "rainstorm",
 			"title": "Rainstorm",
 			"description": "Web-based ideation and writing tool using randomization and intentional constraints to spark creativity.",

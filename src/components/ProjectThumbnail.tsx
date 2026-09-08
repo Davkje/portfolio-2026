@@ -31,7 +31,7 @@ export default function ProjectThumbnail({
 				<span className="text-xs font-mono uppercase" style={{ color: p.accent }}>
 					{String(i + 1).padStart(2, "0")}
 				</span>
-				<span className="text-xs md:text-sm font-medium md:block text-foreground">{p.title}</span>
+				<span className="text-xs font-medium md:block text-foreground">{p.title}</span>
 			</div>
 		</button>
 	);

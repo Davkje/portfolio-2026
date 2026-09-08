@@ -210,7 +210,7 @@ export default function TicTacToe() {
 									}
 									className="relative w-4/5 h-4/5"
 								>
-									<Image src={marks[i]} fill className="object-contain p-1" alt="" />
+									<Image src={marks[i]} fill sizes="40px" className="object-contain p-1" alt="" />
 								</motion.div>
 							)}
 						</button>

@@ -504,6 +504,7 @@ const ProjectSlide = forwardRef<HTMLDivElement, ProjectSlideProps>(
 							src={p.img}
 							alt={p.title}
 							fill
+							sizes="(min-width: 768px) 65vw, 100vw"
 							className="object-cover object-top"
 							priority={i === 0}
 						/>
