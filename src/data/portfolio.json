@@ -177,6 +177,41 @@
 			"accent": "#dcf3de"
 		},
 		{
+			"id": "armour",
+			"title": "Armour Game",
+			"description": "WORK IN PROGRESS - Board game under development. Digital version used for playtesting.",
+			"about": "A physical card and board game my brother Gustav and I currently develop and have been playtesting in person. This is the digital companion: a virtual tabletop that lets us play remotely without being in the same room, built alongside a ruleset that's still actively changing.",
+			"challenge": "The core decision was to NOT build a rules engine or locking game logic into code too early to easily titerate on rules that are still in flux. The app is a sandbox instead: cards and tokens are freely draggable objects, with only shuffling and dealing hardcoded. Adding real-time multiplayer brought its own challenge, keeping each player's hand genuinely private, not just hidden client-side.",
+			"results": "A working online version is deployed and actively used to playtest the physical game remotely. Still very much a work in progress, evolving alongside the physical game.",
+			"role": "Solo Developer",
+			"type": "Work In Progress - Personal Project",
+			"highlights": [
+				"Virtual tabletop sandbox with drag-and-drop cards and tokens across zones.",
+				"Real-time multiplayer on Cloudflare Workers with genuine server-side hand privacy.",
+				"Card data pipeline pulling structured data and art from the team's spreadsheet and design export, so the dataset stays easy to edit without touching code"
+			],
+			"tags": [
+				"TypeScript",
+				"Next.js",
+				"React",
+				"Tailwind",
+				"dnd-kit",
+				"Cloudflare Workers",
+				"Framer Motion"
+			],
+			"liveUrl": "https://armour-game.vercel.app/",
+			"githubUrl": "https://github.com/Davkje/armour-game",
+			"featured": false,
+			"img": "/assets/armour-game/armour-game.png",
+			"videoUrl": "",
+			"altImg": "/assets/armour-game/armour-game.png",
+			"altVideoUrl": "",
+			"year": "2026",
+			"bg": "#18191c",
+			"accent": "#dcf3de"
+		},
+
+		{
 			"id": "ligan",
 			"title": "Ligan",
 			"description": "Fullstack league tracker and leaderboard for tabletop gaming, built through an experimental AI-driven workflow.",
